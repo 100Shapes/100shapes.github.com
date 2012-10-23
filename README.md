@@ -24,6 +24,10 @@ Install the requirements:
 
 	pip install -r requirements.txt
 
+Finally, some annoying stuff with the theme:
+
+	pelican-themes -s path/to/100shapes.com/ohs-pelican-theme/
+
 Done.
 
 

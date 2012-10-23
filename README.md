@@ -25,3 +25,11 @@ Install the requirements:
 	pip install -r requirements.txt
 
 Done.
+
+
+Getting the Posts
+-----------------
+
+Symlink `posts/` from our Google Drive:
+
+	ln -s path/to/drive/Company\ Wide/Blog/posts/ content  

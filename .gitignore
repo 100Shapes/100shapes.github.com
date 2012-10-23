@@ -12,3 +12,4 @@ tags
 .coverage
 htmlcov
 output/
+content

@@ -11,3 +11,4 @@ tags
 .tox
 .coverage
 htmlcov
+output/

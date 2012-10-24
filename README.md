@@ -27,11 +27,35 @@ Install the requirements:
 Done.
 
 
+Generating the Site
+-------------------
+
+Make sure there's a `output/` in your project root that won't be added to the repo because of the .gitignore.
+
+Then you can run:
+	
+	make html
+
+Or, more usefully:
+
+	make devserver
+
+This will regenerate the entire site every time a file changes. You can find more info in the [Pelican Docs](http://docs.getpelican.com/en/3.0/getting_started.html#kickstart-a-blog).
+
+
 Getting the Posts
 -----------------
 
 Symlink `posts/` and `pages/` from our Google Drive:
 
 	ln -s path/to/drive/Company\ Wide/Site/posts/ content
-	ln -s path/to/drive/Company\ Wide/Site/pages/ 
+	ln -s path/to/drive/Company\ Wide/Site/pages/
+
+
+
+Stuff to still do
+----------------- 
 	 
+### Blog Homepage
+
+Posts get built into `blog/`, but we need an index page in there with a list of posts. Maybe this has to be a `page`. See [Pelican Docs](http://docs.getpelican.com/en/3.0/).

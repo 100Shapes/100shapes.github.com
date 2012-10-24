@@ -5,18 +5,29 @@ AUTHOR = u"Michele Memoli"
 SITENAME = u"100shapes.com"
 SITEURL = ''
 
-TIMEZONE = 'Europe/Paris'
+
+# Sort this lang stuff out another time
+# ARTICLE_URL = 'en/blog/'
+# ARTICLE_SAVE_AS = 'en/blog/{date:%Y}-{date:%m}-{slug}.html'
+# ARTICLE_LANG_URL = '{lang}/blog/'
+# ARTICLE_LANG_SAVE_AS = '{lang}/blog/{date:%Y}-{date:%m}-{slug}.html'
+# PAGE_URL = 'en/{slug}/'
+# PAGE_SAVE_AS = 'en/{slug}/index.html'
+# PAGE_LANG_URL = '{lang}/{slug}/'
+# PAGE_LANG_SAVE_AS = '{lang}/{slug}/index.html'
+
+
+# Turn off pages we don't want
+AUTHOR_SAVE_AS = False
+CATEGORY_SAVE_AS = False
+
+
+TIMEZONE = 'Europe/London'
 
 DEFAULT_LANG = 'en'
 
-# Blogroll
-LINKS =  (('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),
-          ('Python.org', 'http://python.org'),
-          ('Jinja2', 'http://jinja.pocoo.org'),
-          ('You can modify those links in your config file', '#'),)
+DEFAULT_PAGINATION = False
 
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+THEME = 'ohs-pelican-theme'
 
-DEFAULT_PAGINATION = 10
+DIRECT_TEMPLATES = ('index')

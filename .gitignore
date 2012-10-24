@@ -13,3 +13,4 @@ tags
 htmlcov
 output/
 content
+*.pid

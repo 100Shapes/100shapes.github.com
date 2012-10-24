@@ -59,3 +59,11 @@ Stuff to still do
 ### Blog Homepage
 
 Posts get built into `blog/`, but we need an index page in there with a list of posts. Maybe this has to be a `page`. See [Pelican Docs](http://docs.getpelican.com/en/3.0/).
+
+
+Notes
+-----
+
+### Unused Templates
+
+Our theme (the `ohs-pelican-theme/` directory) contains a load of templates we've copied over from the stock 'simple' theme. We're not using most of them – ignore them for now.

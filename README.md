@@ -30,6 +30,8 @@ Done.
 Getting the Posts
 -----------------
 
-Symlink `posts/` from our Google Drive:
+Symlink `posts/` and `pages/` from our Google Drive:
 
-	ln -s path/to/drive/Company\ Wide/Blog/posts/ content  
+	ln -s path/to/drive/Company\ Wide/Site/posts/ 
+	ln -s path/to/drive/Company\ Wide/Site/pages/ 
+	 

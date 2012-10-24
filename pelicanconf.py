@@ -5,6 +5,7 @@ AUTHOR = u"Michele Memoli"
 SITENAME = u"100shapes.com"
 SITEURL = ''
 
+# ARTICLE_DIR = 'posts'
 
 # Sort this lang stuff out another time
 ARTICLE_URL = 'blog/'
@@ -32,4 +33,6 @@ DEFAULT_PAGINATION = False
 
 THEME = 'ohs-pelican-theme'
 
-DIRECT_TEMPLATES = ('index')
+DIRECT_TEMPLATES = ('index',)
+
+DELETE_OUTPUT_DIRECTORY = True

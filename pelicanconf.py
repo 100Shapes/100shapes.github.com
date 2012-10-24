@@ -31,6 +31,7 @@ DEFAULT_PAGINATION = False
 
 THEME = 'ohs-pelican-theme'
 
-DIRECT_TEMPLATES = ('index',)
+DIRECT_TEMPLATES = ('index', )
+FILES_TO_COPY = (('CNAME', 'CNAME'),)
 
 DELETE_OUTPUT_DIRECTORY = True

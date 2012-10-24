@@ -33,5 +33,6 @@ THEME = 'ohs-pelican-theme'
 
 DIRECT_TEMPLATES = ('index', )
 FILES_TO_COPY = (('CNAME', 'CNAME'),)
+STATIC_PATHS = ('assets',)
 
 DELETE_OUTPUT_DIRECTORY = True

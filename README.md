@@ -48,9 +48,7 @@ Getting the Posts
 
 Symlink `posts/` and `pages/` from our Google Drive:
 
-	ln -s path/to/drive/Company\ Wide/Site/posts/ content
-	ln -s path/to/drive/Company\ Wide/Site/pages/
-
+	ln -s path/to/drive/Company\ Wide/Site/ content
 
 
 Stuff to still do

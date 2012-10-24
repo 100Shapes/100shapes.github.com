@@ -5,8 +5,6 @@ AUTHOR = u"Michele Memoli"
 SITENAME = u"100shapes.com"
 SITEURL = ''
 
-# ARTICLE_DIR = 'posts'
-
 # Sort this lang stuff out another time
 ARTICLE_URL = 'blog/'
 ARTICLE_SAVE_AS = 'blog/{date:%Y}-{date:%m}-{slug}.html'

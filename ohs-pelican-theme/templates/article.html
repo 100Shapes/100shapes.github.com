@@ -1,59 +1,43 @@
 {% extends "base.html" %}
 
-
-{% block h1 %}{{ article.url }}{% endblock h1 %}
-
-
 {% block content %}
+<article>
+	<address class="vcard author">
+		<a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+	</address>
 
+	<h2>{{ article.subtitle }}</h2>
+	
+	<section class="content">
+	{{ article.content }}
+	</section>
 
+	<footer>
+		{% include 'share_tools.html' %}
+		<div class="tags">
+			<p>Like what you read? Find some more:</p>
+			<ol>
+			{% for tag in article.tags %}
+				<li>
+				<a href="{{ SITEURL }}" title="Design">Design</a>
+				</li>
+			{% endfor %}
+			</ol>
+		</div>
 
+		<!-- More Articles -->
 
-
-<section id="content" class="body">
-  <header class="bronze">
-    <h2 class="entry-title">
-      <a href="{{ article.url }}" rel="bookmark"
-         title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
-  </header>
-  {% if article.author %}
-    <address class="vcard author">
-      <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
-    </address>
-    {% endif %}
-
-        <!-- <abbr class="published" title="{{ article.date.isoformat() }}">
-      {{ article.locale_date }}
-    </abbr> -->
-
-
-  <div class="entry-content">
-    {{ article.content }}
-  </div><!-- /.entry-content -->
-
-  {% include 'share_tools.html' %}
-
-  <!--tags-->
-  <div class="tags">
-    <p>Like what you read? Find some more:</p>
-    <ol>
-      <li>
-        <a href="{{ SITEURL }}" title="Design">Design</a>
-      </li>
-      <li>
-        <a href="{{ SITEURL }}" title="Technology">Technology</a>
-      </li>
-      <li>
-        <a href="{{ SITEURL }}" title="iOS">iOS</a>
-      </li>
-    </ol>
-  </div>
-
-  <footer class="post-footer">
-
-    <!-- More Articles -->
-
-  </footer><!-- /.post-footer -->
-
-</section>
+	</footer>
+</article>
 {% endblock %}
+
+{% block pageTitle %}
+	{{ article.title }}
+{% endblock pageTitle %}
+
+{% block pageHeading %}
+ 	{{ article.title }}
+{% endblock pageHeading %}
+
+{% block pageClass %}{{ super() }}blog article {% if article.class %}{{ article.class }}{% else %}bronze{% endif %}{% endblock pageClass %}
+

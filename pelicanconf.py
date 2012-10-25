@@ -7,18 +7,11 @@ SITEURL = ''
 
 PRODUCTION = False
 
-# Sort this lang stuff out another time
 ARTICLE_SAVE_AS = 'blog/{date:%Y}-{date:%m}-{slug}.html'
 ARTICLE_URL = ARTICLE_SAVE_AS
 
-# ARTICLE_LANG_URL = '{lang}/blog/'
-# ARTICLE_LANG_SAVE_AS = '{lang}/blog/{date:%Y}-{date:%m}-{slug}.html'
 PAGE_SAVE_AS = '{slug}/index.html'
 PAGE_URL = '{slug}/'
-# PAGE_LANG_URL = '{lang}/{slug}/'
-# PAGE_LANG_SAVE_AS = '{lang}/{slug}/index.html'
-
-# TRANSLATION_FEED = 'feeds/100shapes-%s.atom.xml'
 
 # Turn off things we don't want
 AUTHOR_SAVE_AS = False
@@ -39,7 +32,6 @@ THEME = 'ohs-pelican-theme'
 DIRECT_TEMPLATES = ('index', 'blog_index', 'sitemap',)
 BLOG_INDEX_SAVE_AS = 'blog/index.html'
 SITEMAP_SAVE_AS = 'sitemap.xml'
-
 
 FILES_TO_COPY = (
 	('extras/CNAME', 'CNAME'),

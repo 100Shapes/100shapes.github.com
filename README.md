@@ -1,7 +1,9 @@
 100shapes.com
 =============
 
-100shapes built using [Pelican](http://docs.getpelican.com/en/3.0/).
+100shapes.com built using [Pelican](http://docs.getpelican.com/en/3.0/).
+
+Don't know what work to do? Look at the [100Shapes project backlog](https://www.pivotaltracker.com/projects/671939#).
 
 Getting set up
 --------------
@@ -49,8 +51,6 @@ Or, more usefully:
 	make devserver
 
 This will regenerate the entire site every time a file changes. You can find more info in the [Pelican Docs](http://docs.getpelican.com/en/3.0/getting_started.html#kickstart-a-blog).
-
-
 
 
 Deploying

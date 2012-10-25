@@ -51,13 +51,13 @@ Symlink `posts/` and `pages/` from our Google Drive:
 	ln -s path/to/drive/Company\ Wide/Site/ content
 
 
-Stuff to still do
------------------ 
+Deploying
+---------
+
+Deploying's super easy:
+
+	make github 
 	 
-### Blog Homepage
-
-Posts get built into `blog/`, but we need an index page in there with a list of posts. Maybe this has to be a `page`. See [Pelican Docs](http://docs.getpelican.com/en/3.0/).
-
 
 Notes
 -----

@@ -35,8 +35,9 @@ DEFAULT_PAGINATION = False
 
 THEME = 'ohs-pelican-theme'
 
-DIRECT_TEMPLATES = ('index', 'blog_index',)
+DIRECT_TEMPLATES = ('index', 'blog_index', 'sitemap',)
 BLOG_INDEX_SAVE_AS = 'blog/index.html'
+SITEMAP_SAVE_AS = 'sitemap.xml'
 
 
 FILES_TO_COPY = (

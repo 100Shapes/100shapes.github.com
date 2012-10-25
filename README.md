@@ -17,8 +17,12 @@ Clone the repo to where you normally keep code:
 
 Set the project root:
 
-	cd 100shapes.com/
+	cd 100shapes.github.com/
 	setvirtualenvproject
+
+Make the output dir:
+
+	mkdir output
 
 Install the requirements:
 

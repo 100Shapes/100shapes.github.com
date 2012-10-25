@@ -1,3 +1,9 @@
 body {
-  color: #eeeeee;
+  background-color: #eee;
+}
+.global_nav {
+  background-color: #555555;
+}
+.footer {
+  background-color: #555555;
 }

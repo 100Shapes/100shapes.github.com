@@ -17,7 +17,7 @@
         
 
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/normalize.min.css">
-        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/base.css" />
         {% block extraHead %}
         {% endblock extraHead %}
         
@@ -36,10 +36,11 @@
 
         {% block scripts %}{% endblock %}
 
-        
+        {% include 'footer.html' %}
+
         {% if PRODUCTION %}
         {% include 'google_analytics.html' %}            
-        {% endif %}  
+        {% endif %} 
         
   </body>
 </html>

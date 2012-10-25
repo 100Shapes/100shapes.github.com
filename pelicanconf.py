@@ -40,7 +40,8 @@ BLOG_INDEX_SAVE_AS = 'blog/index.html'
 
 
 FILES_TO_COPY = (
-	('CNAME', 'CNAME'),
+	('extras/CNAME', 'CNAME'),
+	('extras/README.md', 'README.md'),
 )
 STATIC_PATHS = ('assets',)
 

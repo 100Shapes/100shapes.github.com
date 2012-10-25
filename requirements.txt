@@ -9,3 +9,4 @@ pelican==3.0
 pytz==2012g
 wsgiref==0.1.2
 git+git://github.com/100Shapes/ghp-import.git
+git+https://redmonkey@bitbucket.org/redmonkey/pelican-plugin-gravatar-plus.git

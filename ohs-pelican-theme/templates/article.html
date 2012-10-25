@@ -3,7 +3,9 @@
 {% block content %}
 <article>
 	<address class="vcard author">
-		<a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+		
+		<img src="{{ article.author_gravatar.thumbnailUrl }}">
+
 	</address>
 
 	<h2>{{ article.subtitle }}</h2>

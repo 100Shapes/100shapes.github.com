@@ -39,5 +39,7 @@ FILES_TO_COPY = (
 )
 STATIC_PATHS = ('assets',)
 
+PLUGINS = ['gravatar_plus',]
+
 DELETE_OUTPUT_DIRECTORY = True
 

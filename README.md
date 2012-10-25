@@ -24,6 +24,10 @@ Install the requirements:
 
 	pip install -r requirements.txt
 
+Symlink `posts/` and `pages/` from our Google Drive:
+
+	ln -s path/to/drive/Company\ Wide/Site/ content
+
 Done.
 
 
@@ -43,12 +47,6 @@ Or, more usefully:
 This will regenerate the entire site every time a file changes. You can find more info in the [Pelican Docs](http://docs.getpelican.com/en/3.0/getting_started.html#kickstart-a-blog).
 
 
-Getting the Posts
------------------
-
-Symlink `posts/` and `pages/` from our Google Drive:
-
-	ln -s path/to/drive/Company\ Wide/Site/ content
 
 
 Deploying

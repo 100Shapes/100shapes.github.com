@@ -29,18 +29,16 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
-        <header>
-            {% include 'global_nav.html' %}
-            <hgroup>      
-            <h1>{% block h1 %}{% endblock h1 %}</h1>
-            <h2>{% block h2 %}{% endblock h2 %}</h2>
-            </hgroup>
-        </header>
+        {% include 'global_nav.html' %}
 
-        {% block content %}{% endblock %}
+        <h1>{% block pageHeading %}{% endblock pageHeading %}</h1>
 
+        <section class="content">
+            {% block content %}{% endblock %}
+        </section>
 
         {% include 'footer.html' %}
+        
         {% block scripts %}{% endblock %}
 
         {% if PRODUCTION %}

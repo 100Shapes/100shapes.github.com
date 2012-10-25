@@ -29,7 +29,13 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
-        {% include 'global_nav.html' %}
+        <header>
+            {% include 'global_nav.html' %}
+            <hgroup>      
+            <h1>{% block h1 %}{% endblock h1 %}</h1>
+            <h2>{% block h2 %}{% endblock h2 %}</h2>
+            </hgroup>
+        </header>
 
         {% block content %}{% endblock %}
 

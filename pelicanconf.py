@@ -8,12 +8,13 @@ SITEURL = ''
 PRODUCTION = False
 
 # Sort this lang stuff out another time
-ARTICLE_URL = 'blog/'
 ARTICLE_SAVE_AS = 'blog/{date:%Y}-{date:%m}-{slug}.html'
+ARTICLE_URL = ARTICLE_SAVE_AS
+
 # ARTICLE_LANG_URL = '{lang}/blog/'
 # ARTICLE_LANG_SAVE_AS = '{lang}/blog/{date:%Y}-{date:%m}-{slug}.html'
-PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
+PAGE_URL = '{slug}/'
 # PAGE_LANG_URL = '{lang}/{slug}/'
 # PAGE_LANG_SAVE_AS = '{lang}/{slug}/index.html'
 

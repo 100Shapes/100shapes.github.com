@@ -7,6 +7,8 @@ from pelicanconf import *
 
 SITEURL = 'http://100shapes.com'
 
+PRODUCTION = True
+
 DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing

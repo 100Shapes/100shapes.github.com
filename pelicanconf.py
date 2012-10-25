@@ -25,6 +25,8 @@ CATEGORY_SAVE_AS = False
 CATEGORY_FEED_ATOM = False
 # FEED_ATOM = False
 
+ARTICLE_DIR = 'posts/'
+
 TIMEZONE = 'Europe/London'
 
 DEFAULT_LANG = 'en'
@@ -33,8 +35,14 @@ DEFAULT_PAGINATION = False
 
 THEME = 'ohs-pelican-theme'
 
-DIRECT_TEMPLATES = ('index', )
-FILES_TO_COPY = (('CNAME', 'CNAME'),)
+DIRECT_TEMPLATES = ('index', 'blog_index',)
+BLOG_INDEX_SAVE_AS = 'blog/index.html'
+
+
+FILES_TO_COPY = (
+	('CNAME', 'CNAME'),
+)
 STATIC_PATHS = ('assets',)
 
 DELETE_OUTPUT_DIRECTORY = True
+

@@ -1,7 +1,9 @@
 100shapes.com
 =============
 
-100shapes built using [Pelican](http://docs.getpelican.com/en/3.0/).
+100shapes.com built using [Pelican](http://docs.getpelican.com/en/3.0/).
+
+Don't know what work to do? Look at the [100Shapes project backlog](https://www.pivotaltracker.com/projects/671939#).
 
 Getting set up
 --------------
@@ -13,16 +15,24 @@ Make a virtual directory for the project:
 Clone the repo to where you normally keep code:
 
 	cd ~/Projects/
-	git clone git@github.com:100Shapes/100shapes.com.git
+	git clone git@github.com:100Shapes/100shapes.github.com.git
 
 Set the project root:
 
-	cd 100shapes.com/
+	cd 100shapes.github.com/
 	setvirtualenvproject
+
+Make the output dir:
+
+	mkdir output
 
 Install the requirements:
 
 	pip install -r requirements.txt
+
+Symlink `posts/` and `pages/` from our Google Drive:
+
+	ln -s path/to/drive/Company\ Wide/Site/ content
 
 Done.
 
@@ -41,14 +51,6 @@ Or, more usefully:
 	make devserver
 
 This will regenerate the entire site every time a file changes. You can find more info in the [Pelican Docs](http://docs.getpelican.com/en/3.0/getting_started.html#kickstart-a-blog).
-
-
-Getting the Posts
------------------
-
-Symlink `posts/` and `pages/` from our Google Drive:
-
-	ln -s path/to/drive/Company\ Wide/Site/ content
 
 
 Deploying

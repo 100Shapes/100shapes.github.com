@@ -1,6 +1,9 @@
 body {
   background-color: #eee;
 }
+.bronze {
+  background-color: #555555;
+}
 .global_nav {
   background-color: #555555;
 }

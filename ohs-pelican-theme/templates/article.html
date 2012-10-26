@@ -34,7 +34,14 @@
 			<p>Like what you read? There's more:</p>
 			<ol>
 		        {% for post in article.related_posts %}
-		        <li><a href="{{ SITE_URL}}/{{ post.url }}">{{ post.title }}</a></li>
+		        <li>
+		        	<a href="{{ SITE_URL}}/{{ post.url }}">
+
+		        		<img alt="{{ post.alt }}" src="{{ ASSET_URL }}/{{ post.slug }}/article_icon.jpg">
+		        		</a>
+
+
+		        	</li>
 		        {% endfor %}
 		    </ol>
 		</div>

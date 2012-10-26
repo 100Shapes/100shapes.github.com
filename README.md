@@ -1,4 +1,4 @@
-100shapes.com
+]100shapes.com
 =============
 
 100shapes.com built using [Pelican](http://docs.getpelican.com/en/3.0/).
@@ -71,6 +71,10 @@ I'm seeings Warnings
 	WARNING: Feeds generated without SITEURL
 
 It's fine – when we publish, a `SITEURL` gets specified
+
+### There's no CSS
+
+CSS isn't included in the repo, use LESS instead. Run the less app and generate it all. 
 
 
 Notes

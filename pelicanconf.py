@@ -39,7 +39,10 @@ FILES_TO_COPY = (
 )
 STATIC_PATHS = ('assets',)
 
-PLUGINS = ['gravatar_plus',]
+# PLUGIN_PATH = "/Users/michele/Projects/100shapes.com/plugins"
+
+PLUGINS = ('ohs_plugins.gravatar_plus',)
+
 
 DELETE_OUTPUT_DIRECTORY = True
 

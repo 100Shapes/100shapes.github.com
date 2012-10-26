@@ -41,7 +41,7 @@ STATIC_PATHS = ('assets',)
 
 # PLUGIN_PATH = "/Users/michele/Projects/100shapes.com/plugins"
 
-PLUGINS = ('ohs_plugins.gravatar_plus',)
+PLUGINS = ('ohs_plugins.gravatar_plus', 'ohs_plugins.related_posts')
 
 
 DELETE_OUTPUT_DIRECTORY = True

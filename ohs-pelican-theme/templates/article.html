@@ -18,18 +18,28 @@
 
 	<footer>
 		{% include 'share_tools.html' %}
+		
 		<div class="tags">
-			<p>Like what you read? Find some more:</p>
-			<ol>
-			{% for tag in article.tags %}
-				<li>
-				<a href="{{ SITEURL }}" title="Design">Design</a>
-				</li>
-			{% endfor %}
-			</ol>
+			<ul>
+				{% for tag in article.tags %}
+					<li>
+						<a href="{{ SITE_URL}}/{{ tag.url }}" title="{{ tag }}">{{ tag }}</a>
+					</li>
+				{% endfor %}
+			<ul>
 		</div>
+	    
+		{% if article.related_posts %}
+		<div class="tags">
+			<p>Like what you read? There's more:</p>
+			<ol>
+		        {% for post in article.related_posts %}
+		        <li><a href="{{ SITE_URL}}/{{ post.url }}">{{ post.title }}</a></li>
+		        {% endfor %}
+		    </ol>
+		</div>
+	    {% endif %}
 
-		<!-- More Articles -->
 
 	</footer>
 </article>

@@ -9,6 +9,10 @@
 @link-color-base: #7b285e;
 @link-color-hover: @link-color-base;
 
+@ws-unit: 1em / 2;
+
+
+
 a {
 	font-weight: 600; 
 	color: @link-color-base;
@@ -18,6 +22,7 @@ a {
 		text-decoration: underline;
 	}
 }
+
 body {
 	background-color: @background-color-light;
 	margin: 0;
@@ -25,9 +30,33 @@ body {
 	color: @body-copy-color;
 	line-height: 1.5;
 }
+
 nav {
 	background-color: @background-color-dark;
+	height: @ws-unit * 8;
+
+	a {
+		color: #fff;
+		font-weight: normal;
+	}
+
+	ol {
+		margin: 0;
+		padding: 0;
+		text-align: right;
+	}
+
+	li {
+		padding: 0;
+		list-style-type: none;
+		display: inline;
+	
+		&:first-child {
+			float: left;
+		}
+	}
 }
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: @font-family-headings;
 	color: @background-color-dark;

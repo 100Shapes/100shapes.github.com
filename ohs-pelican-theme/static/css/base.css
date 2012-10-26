@@ -15,6 +15,24 @@ body {
 }
 nav {
   background-color: #393939;
+  height: 4em;
+}
+nav a {
+  color: #fff;
+  font-weight: normal;
+}
+nav ol {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+nav li {
+  padding: 0;
+  list-style-type: none;
+  display: inline;
+}
+nav li:first-child {
+  float: left;
 }
 h1,
 h2,

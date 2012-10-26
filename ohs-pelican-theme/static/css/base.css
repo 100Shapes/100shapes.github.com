@@ -1,9 +1,27 @@
+a {
+  font-weight: 600;
+  color: #7b285e;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 body {
-  background-color: #eee;
+  background-color: #eeeeee;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #aaaaaa;
+  line-height: 1.5;
 }
-.global_nav {
-  background-color: #555555;
+nav {
+  background-color: #393939;
 }
-.footer {
-  background-color: #555555;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Georgia, serif;
+  color: #393939;
 }

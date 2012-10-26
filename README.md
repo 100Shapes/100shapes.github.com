@@ -34,21 +34,25 @@ Symlink `posts/` and `pages/` from our Google Drive:
 
 	ln -s path/to/drive/Company\ Wide/Site/ content
 
-Done.
+Now copy `sample.env` to `.env`. This file won't be added to the repo:
+
+	cp sample.env .env
+
+Open you `.env` file and fill in the vars with our (Amazon S3 details)[https://sites.google.com/a/onehundredshapes.com/info/credentials].
+
+Make sure you've got `foreman` installed:
+
+	which foreman
 
 
-Generating the Site
--------------------
+Running the Site
+----------------
 
 Make sure there's a `output/` in your project root that won't be added to the repo because of the .gitignore.
 
 Then you can run:
 	
-	make html
-
-Or, more usefully:
-
-	make devserver
+	foreman start
 
 This will regenerate the entire site every time a file changes. You can find more info in the [Pelican Docs](http://docs.getpelican.com/en/3.0/getting_started.html#kickstart-a-blog).
 

@@ -38,7 +38,7 @@ Now copy `sample.env` to `.env`. This file won't be added to the repo:
 
 	cp sample.env .env
 
-Open you `.env` file and fill in the vars with our (Amazon S3 details)[https://sites.google.com/a/onehundredshapes.com/info/credentials].
+Open you `.env` file and fill in the vars with our [Amazon S3 details](https://sites.google.com/a/onehundredshapes.com/info/credentials).
 
 Make sure you've got `foreman` installed:
 

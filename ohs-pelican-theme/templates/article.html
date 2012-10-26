@@ -3,45 +3,36 @@
 {% block content %}
 <article>
 	<address class="vcard author">
-		
-		{{ article.author_name }}
 
-		<img src="{{ article.author_gravatar }}?s=80">
+		<span class="clip">
+			<img class="photo" alt="profile picture of {{ article.author_name }}" src="{{ article.author_gravatar }}?s=72" width="72" height="72">
+		</span>
+		<span class="fn">{{ article.author_name }}</span>
 
 	</address>
 
 	<h2>{{ article.subtitle }}</h2>
 	
-	<section class="content">
+	<section class="content" role="main">
 	{{ article.content }}
 	</section>
 
-	<footer>
+	<footer role="complementary">
 		{% include 'share_tools.html' %}
 		
-		<div class="tags">
-			<ul>
-				{% for tag in article.tags %}
-					<li>
-						<a href="{{ SITE_URL}}/{{ tag.url }}" title="{{ tag }}">{{ tag }}</a>
-					</li>
-				{% endfor %}
-			<ul>
-		</div>
-	    
 		{% if article.related_posts %}
-		<div class="tags">
-			<p>Like what you read? There's more:</p>
+		<div class="related-articles">
+			<h2>More Articles</h2>
 			<ol>
 		        {% for post in article.related_posts %}
 		        <li>
-		        	<a href="{{ SITE_URL}}/{{ post.url }}">
-
-		        		<img alt="{{ post.alt }}" src="{{ ASSET_URL }}/{{ post.slug }}/article_icon.jpg">
-		        		</a>
-
-
-		        	</li>
+					<article>
+						<a href="{{ SITE_URL}}/{{ post.url }}">
+							<img alt="{{ post.alt }}" src="{{ ASSET_URL }}/{{ post.slug }}/article_icon.jpg">
+							<h3>{{ post.title }}</h3>
+			        	</a>
+					</article>		        	
+		        </li>
 		        {% endfor %}
 		    </ol>
 		</div>

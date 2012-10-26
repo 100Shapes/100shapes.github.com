@@ -1,17 +1,4 @@
-@background-color-light: #eee;
-@background-color-dark: #393939;
-
-@font-family-copy: 'Open Sans', sans-serif;
-@font-family-headings: Georgia, serif;
-
-@body-copy-color: #aaa;
-
-@link-color-base: #7b285e;
-@link-color-hover: @link-color-base;
-
-@ws-unit: 1em / 2;
-
-
+@import "vars";
 
 a {
 	font-weight: 600; 
@@ -32,8 +19,9 @@ body {
 }
 
 nav {
+	.inner-shadow(0px, -@ws-unit, @ws-unit, 0.5);
 	background-color: @background-color-dark;
-	height: @ws-unit * 8;
+	padding: @ws-unit*1.5 @ws-unit*3 @ws-unit*1.5;
 
 	a {
 		color: #fff;
@@ -54,10 +42,26 @@ nav {
 		&:first-child {
 			float: left;
 		}
+		&:last-child {
+			margin-left: @ws-unit*2;
+		}
 	}
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: @font-family-headings;
-	color: @background-color-dark;
+	color: @header-color-dark;
+	text-align: center;
+}
+h1 {
+	color: @header-color-light;
+}
+
+
+header {
+	background-color: @header-background-color;
+}
+footer {
+	margin: @ws-unit*8 0 @ws-unit*6;
+	text-align: center;
 }

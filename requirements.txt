@@ -5,7 +5,7 @@ Unidecode==0.04.9
 blinker==1.2
 docutils==0.9.1
 feedgenerator==1.2.1
-pelican==3.1
+pelican==3.0
 pytz==2012g
 wsgiref==0.1.2
 git+git://github.com/100Shapes/ghp-import.git

@@ -51,5 +51,9 @@
  	{{ article.title }}
 {% endblock pageHeading %}
 
+{% block author %}{{ article.author_name }}{% endblock author %}
+
+{% block description %}{{ article.description }}{% endblock description %}
+
 {% block pageClass %}{{ super() }}blog article {% if article.class %}{{ article.class }}{% else %}bronze{% endif %}{% endblock pageClass %}
 

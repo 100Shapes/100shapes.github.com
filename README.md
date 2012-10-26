@@ -34,11 +34,11 @@ Symlink `posts/` and `pages/` from our Google Drive:
 
 	ln -s path/to/drive/Company\ Wide/Site/ content
 
-Now copy `sample.env` to `.env`. This file won't be added to the repo:
+In order to push to S3, we need `s3cmd`. Easiest way to get it is with `homebrew`
 
-	cp sample.env .env
+	brew install s3cmd
 
-Open you `.env` file and fill in the vars with our [Amazon S3 details](https://sites.google.com/a/onehundredshapes.com/info/credentials).
+There's plenty of help on [installing homebrew](https://www.google.co.uk/search?q=mountain+lion+install+homebrew) on the new.
 
 Make sure you've got `foreman` installed:
 

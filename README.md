@@ -68,9 +68,6 @@ I'm seeings Warnings
 
 It's fine – when we publish, a `SITEURL` gets specified
 
-	WARNING: Caught exception "'pelican.contents.Article object' has no attribute 'author_gravatar'"
-
-It's to do with creating the avatar. We we build the new `author_gravatar` context variable using [pelican-gravatar-plus](https://bitbucket.org/redmonkey/pelican-plugin-gravatar-plus) we create that property, but because of the way Jinja template look it up, they `warn` first.
 
 Notes
 -----

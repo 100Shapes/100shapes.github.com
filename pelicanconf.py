@@ -46,5 +46,5 @@ PLUGINS = ('ohs_plugins.gravatar_plus', 'ohs_plugins.related_posts')
 ASSET_URL = '/static/assets'
 
 
-DELETE_OUTPUT_DIRECTORY = True
+DELETE_OUTPUT_DIRECTORY = False
 

@@ -40,7 +40,7 @@ def add_gravatar(generator, metadata):
         email = metadata['email']
         gravatar = GRAVATARS.get(email, None)
         if not gravatar:
-            gravatar_profile_url = "http://www.gravatar.com/" + \
+            gravatar_profile_url = "http://en.gravatar.com/" + \
                             hashlib.md5(metadata['email'].lower()).hexdigest() + '.json'
             res = requests.get(gravatar_profile_url)
             # Example response: http://en.gravatar.com/205e460b479e2e5b48aec07710c08d50.json

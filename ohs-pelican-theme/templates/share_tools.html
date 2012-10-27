@@ -2,13 +2,38 @@
 	<h2>Share this Article</h2>
 	<ol>
 		<li>
-			<a href="#" title="Share on Facebook" class="share-fb">facebook</a>
+			<a href="http://www.facebook.com/share.php?u={{ Site_URL }}/{{ article.url }}" onclick="return fb_like()" target="_blank" title="Share on Facebook" class="share-fb">facebook</a>
 		</li>
 		<li>
-			<a href="#" title="Share on Twitter" class="share-tw">twitter</a>
+			<a href="http://twitter.com/share" title="Share on Twitter" class="share-tw">twitter</a>
 		</li>
 		<li>
-			<a href="#" title="Share on Pinterest" class="share-pt">pinterest</a>
+			<a href="javascript:void((function()%7Bvar%20e=document.createElement(&apos;script&apos;);e.setAttribute(&apos;type&apos;,&apos;text/javascript&apos;);e.setAttribute(&apos;charset&apos;,&apos;UTF-8&apos;);e.setAttribute(&apos;src&apos;,&apos;http://assets.pinterest.com/js/pinmarklet.js?r=&apos;+Math.random()*99999999);document.body.appendChild(e)%7D)());" title="Share on Pinterest" class="share-pt">pinterest</a>
 		</li>
 	</ol>
 </div>
+
+<script>
+(function() {
+
+	var width  = 626,
+        height = 436,
+        title  = document.title,
+        url    = location.href,
+        opts   = 'status=0' +
+                 ',width='  + width  +
+                 ',height=' + height +
+                 ',top='    + top    +
+                 ',left='   + left;
+
+	function fb_like() {
+		window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(url)+'&t='+encodeURIComponent(title),'Facebook Sharer',opts);
+		return false;
+	}
+	
+	function tweet() {
+	    window.open(url, 'twitter', opts);
+	    return false;
+	}
+})();
+</script>

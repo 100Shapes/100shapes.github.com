@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'MisoBold';
+  src: url('./miso_bold_macroman/miso-bold-webfont.eot');
+  src: url('./miso_bold_macroman/miso-bold-webfont.eot?#iefix') format('embedded-opentype'), url('./miso_bold_macroman/miso-bold-webfont.woff') format('woff'), url('./miso_bold_macroman/miso-bold-webfont.ttf') format('truetype'), url('./miso_bold_macroman/miso-bold-webfont.svg#MisoRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MisoRegular';
+  src: url('./miso_regular_macroman/miso-regular-webfont.eot');
+  src: url('./miso_regular_macroman/miso-regular-webfont.eot?#iefix') format('embedded-opentype'), url('./miso_regular_macroman/miso-regular-webfont.woff') format('woff'), url('./miso_regular_macroman/miso-regular-webfont.ttf') format('truetype'), url('./miso_regular_macroman/miso-regular-webfont.svg#MisoRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 a {
   font-weight: 600;
   color: #7b285e;
@@ -22,6 +36,7 @@ nav {
 }
 nav a {
   color: #fff;
+  font-family: 'MisoRegular';
   font-weight: normal;
 }
 nav ol {
@@ -46,12 +61,21 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Georgia, serif;
+  font-family: 'MisoBold', 'Open Sans', sans-serif;
   color: #666666;
   text-align: center;
 }
 h1 {
+  font-size: 3.75rem;
+  line-height: 4rem;
+  background-color: #b8316a;
   color: #ffffff;
+  font-weight: normal;
+  margin: 0;
+}
+h2 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 header {
   background-color: #b8316a;
@@ -59,4 +83,33 @@ header {
 footer {
   margin: 4rem 0 3rem;
   text-align: center;
+}
+.content {
+  padding-top: 3rem;
+  width: 45rem;
+  margin: 0 auto;
+}
+.article-list {
+  text-align: center;
+}
+.article-list article {
+  width: 13rem;
+}
+.article-list ol {
+  margin: 0;
+  padding: 0;
+}
+.article-list li {
+  display: inline-block;
+  margin: 0 0.75rem;
+  padding: 0;
+  list-style-type: none;
+  vertical-align: top;
+}
+.article-list h3 {
+  color: #7b285e;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
 }

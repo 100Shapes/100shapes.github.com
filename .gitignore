@@ -16,4 +16,4 @@ content
 *.pid
 pages
 .env
-ohs-pelican-theme/static/css/
+ohs-pelican-theme/static/css/*.css

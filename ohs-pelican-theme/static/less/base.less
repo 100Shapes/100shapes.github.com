@@ -1,5 +1,26 @@
 @import "vars";
+@font-face {
+    font-family: 'MisoBold';
+    src: url('./miso_bold_macroman/miso-bold-webfont.eot');
+    src: url('./miso_bold_macroman/miso-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./miso_bold_macroman/miso-bold-webfont.woff') format('woff'),
+         url('./miso_bold_macroman/miso-bold-webfont.ttf') format('truetype'),
+         url('./miso_bold_macroman/miso-bold-webfont.svg#MisoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
+@font-face {
+    font-family: 'MisoRegular';
+    src: url('./miso_regular_macroman/miso-regular-webfont.eot');
+    src: url('./miso_regular_macroman/miso-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./miso_regular_macroman/miso-regular-webfont.woff') format('woff'),
+         url('./miso_regular_macroman/miso-regular-webfont.ttf') format('truetype'),
+         url('./miso_regular_macroman/miso-regular-webfont.svg#MisoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 a {
 	font-weight: 600; 
 	color: @link-color-base;
@@ -25,6 +46,7 @@ nav {
 
 	a {
 		color: #fff;
+		font-family: 'MisoRegular';
 		font-weight: normal;
 	}
 
@@ -53,8 +75,16 @@ h1, h2, h3, h4, h5, h6 {
 	color: @header-color-dark;
 	text-align: center;
 }
+
 h1 {
 	color: @header-color-light;
+	font-size: @ws-unit * 7.5;
+	line-height: @ws-unit * 8;
+}
+
+h2 {
+	font-size: @ws-unit * 4.5;
+	line-height: @ws-unit * 5;
 }
 
 

@@ -1,11 +1,11 @@
-{% extends 'base.html' %}
+{% extends 'page.html' %}
 
 
 
 {% block content %}
 
 	{% from 'macros.html' import article_list with context %}
-	{{ article_list(articles) }}
+	{{ article_list(articles, 'Recent Articles') }}
 
 {% endblock content %}
 
@@ -15,4 +15,4 @@
 
 {% block description %}100Shapes Blogpost index{% endblock description %}
 
-{% block pageClass %}blog blog_index{% endblock %}
+{% block pageClass %}{{ super() }} blog blog_index{% endblock %}

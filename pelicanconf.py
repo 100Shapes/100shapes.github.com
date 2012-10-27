@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
-AUTHOR = u"Michele Memoli"
+AUTHOR = u"100Shapes"
 SITENAME = u"100shapes.com"
 SITEURL = ''
 

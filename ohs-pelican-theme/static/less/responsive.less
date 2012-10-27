@@ -2,22 +2,16 @@
 
 // Large desktops
 @media (min-width: 768px) {
-	section.content {
-		width: @ws-unit*90;
-		margin: 0 auto;
-	}
+
 }
 
-@media (max-width: 767px) {
-	section.content {
-		padding: 0 @ws-unit*3;
-	}
-}
-//
 // Responsive: Landscape phone to desktop/tablet
-// --------------------------------------------------
 @media (max-width: 767px) {
-
+	.content {
+		padding-left: @ws-unit*3;
+		padding-right: @ws-unit*3;
+		width: auto;
+	}
 }
 
 

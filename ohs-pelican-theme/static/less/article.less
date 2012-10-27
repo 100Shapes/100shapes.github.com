@@ -44,8 +44,32 @@
 			display: inline-block;
 			margin:0 @ws-unit;
 		}
-	}
-	.share-tools h2 {
-		.visuallyhidden();
+		h2 {
+			.visuallyhidden();
+		}
+		a {
+			.rounded(@ws-unit*8);
+			background-image: url('../img/social_sprite.png');
+			background-repeat: no-repeat;
+			display: block;
+			height: 48px;
+			width: 42px;
+		}
+		span {
+			display: none;
+		}
+		
+		.share-fb {
+			background-position: -3px 0px;
+			background-color: #5b78a6;
+		}
+		.share-tw {
+			background-position: -54px 0px;
+			background-color: #77cced;
+		}
+		.share-pt {
+			background-position: -104px 0px;
+			background-color: #bf4751;
+		}
 	}
 }

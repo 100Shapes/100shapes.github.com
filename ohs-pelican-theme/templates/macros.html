@@ -1,0 +1,19 @@
+{% macro article_list(articles, heading=False) %}
+	<div class="article-list">
+		{% if heading %}
+			<h2>{{ heading }}</h2>
+		{% endif %}
+		<ol>
+	        {% for article in articles %}
+	        <li>
+				<article>
+					<a href="{{ SITE_URL}}/{{ article.url }}">
+						<img alt="{{ article.alt }}" src="{{ ASSET_URL }}/{{ article.slug }}/article_icon.jpg">
+						<h3>{{ article.title }}</h3>
+		        	</a>
+				</article>		        	
+	        </li>
+	        {% endfor %}
+	    </ol>
+	</div>
+{% endmacro %}

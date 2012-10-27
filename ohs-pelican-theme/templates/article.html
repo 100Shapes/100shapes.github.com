@@ -21,23 +21,9 @@
 		{% include 'share_tools.html' with context %}
 		
 		{% if article.related_posts %}
-		<div class="related-articles">
-			<h2>More Articles</h2>
-			<ol>
-		        {% for post in article.related_posts %}
-		        <li>
-					<article>
-						<a href="{{ SITE_URL}}/{{ post.url }}">
-							<img alt="{{ post.alt }}" src="{{ ASSET_URL }}/{{ post.slug }}/article_icon.jpg">
-							<h3>{{ post.title }}</h3>
-			        	</a>
-					</article>		        	
-		        </li>
-		        {% endfor %}
-		    </ol>
-		</div>
+			{% from 'macros.html' import article_list with context %}
+			{{ article_list(article.related_posts, 'More Articles') }}
 	    {% endif %}
-
 
 	</footer>
 </article>

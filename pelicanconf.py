@@ -48,3 +48,4 @@ ASSET_URL = '/static/assets'
 
 DELETE_OUTPUT_DIRECTORY = False
 
+WEBASSETS = True

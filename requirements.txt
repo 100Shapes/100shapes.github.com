@@ -3,10 +3,12 @@ Markdown==2.2.0
 Pygments==1.5
 Unidecode==0.04.9
 blinker==1.2
+cssmin==0.1.4
 docutils==0.9.1
 feedgenerator==1.2.1
+git+git://github.com/100Shapes/ghp-import.git
 pelican==3.0
 pytz==2012g
-wsgiref==0.1.2
-git+git://github.com/100Shapes/ghp-import.git
 requests==0.14.0
+webassets==0.7.1
+wsgiref==0.1.2

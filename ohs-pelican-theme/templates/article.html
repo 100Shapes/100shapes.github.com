@@ -19,7 +19,9 @@
 
 	<footer role="complementary">
 		{% include 'share_tools.html' with context %}
-		
+
+		{% include 'tags_list.html' with context %}
+
 		{% if article.related_posts %}
 			{% from 'macros.html' import article_list with context %}
 			{{ article_list(article.related_posts, 'More Articles') }}

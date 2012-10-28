@@ -1,5 +1,6 @@
 .article h1 {
-  padding: 10rem 0;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 .article address.author {
   text-align: center;
@@ -50,4 +51,55 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+.article .share-tools a {
+  -webkit-border-radius: 4rem;
+  -moz-border-radius: 4rem;
+  border-radius: 4rem;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-image: url('../img/social_sprite.png');
+  background-repeat: no-repeat;
+  display: block;
+  height: 48px;
+  width: 42px;
+}
+.article .share-tools span {
+  display: none;
+}
+.article .share-tools .share-fb {
+  background-position: -3px 0px;
+  background-color: #5b78a6;
+}
+.article .share-tools .share-tw {
+  background-position: -54px 0px;
+  background-color: #77cced;
+}
+.article .share-tools .share-pt {
+  background-position: -104px 0px;
+  background-color: #bf4751;
+}
+.article .tags-list {
+  margin-top: 1.5rem;
+}
+.article .tags-list ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.article .tags-list li {
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: #fff;
+  float: left;
+  padding: 0.25rem 0.5rem;
+  list-style-type: none;
+  margin: 0 0.5rem;
+  background-color: #cccccc;
 }

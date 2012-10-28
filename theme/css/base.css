@@ -68,10 +68,12 @@ h6 {
 h1 {
   font-size: 3.75rem;
   line-height: 4rem;
-  background-color: #b8316a;
+  background: #b8316a url('../img/bronze_header.jpg') left center no-repeat;
   color: #ffffff;
   font-weight: normal;
   margin: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 h2 {
   font-size: 2.25rem;

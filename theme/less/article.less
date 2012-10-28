@@ -2,8 +2,8 @@
 
 .article {
 	h1 {
-		
-		padding: @ws-unit*20 0;
+		padding-top: @ws-unit*20;
+		padding-bottom: @ws-unit*20;
 	}
 	address.author {
 		text-align: center;
@@ -44,8 +44,51 @@
 			display: inline-block;
 			margin:0 @ws-unit;
 		}
+		h2 {
+			.visuallyhidden();
+		}
+		a {
+			.rounded(@ws-unit*8);
+			background-image: url('../img/social_sprite.png');
+			background-repeat: no-repeat;
+			display: block;
+			height: 48px;
+			width: 42px;
+		}
+		span {
+			display: none;
+		}
+		
+		.share-fb {
+			background-position: -3px 0px;
+			background-color: #5b78a6;
+		}
+		.share-tw {
+			background-position: -54px 0px;
+			background-color: #77cced;
+		}
+		.share-pt {
+			background-position: -104px 0px;
+			background-color: #bf4751;
+		}
 	}
-	.share-tools h2 {
-		.visuallyhidden();
+	.tags-list {
+		margin-top: @ws-unit*3;
+		
+		ul {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+		li {
+			.rounded(@ws-unit);
+			color: #fff;
+			float: left;
+			padding: @ws-unit/2 @ws-unit;
+			list-style-type: none;
+			margin: 0 @ws-unit;
+			background-color: @light-grey-color;
+		}
 	}
 }

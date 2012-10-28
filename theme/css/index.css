@@ -1,0 +1,24 @@
+.index {
+  background-image: url('../img/background_long.jpg');
+  position: relative;
+  width: 100%;
+}
+.index .content {
+  width: auto;
+}
+.index svg {
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  height: 100%;
+  position: absolute;
+}
+.index h1 {
+  background: none;
+  font-family: 'MisoRegular';
+  margin-top: 5rem;
+}
+.index h2 {
+  color: #fff;
+  font-family: 'MisoRegular';
+}

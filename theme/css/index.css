@@ -8,17 +8,40 @@
 }
 .index svg {
   margin: 0 auto;
-  top: 0;
-  left: 0;
-  height: 100%;
   position: absolute;
+  width: 800px;
+  height: 3000px;
+  top: 0;
+  left: 50%;
+  margin-left: -400px;
 }
 .index h1 {
   background: none;
   font-family: 'MisoRegular';
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 .index h2 {
   color: #fff;
   font-family: 'MisoRegular';
+  outline: 4px solid #fff;
+  width: 155px;
+  margin: 0 auto;
+  padding: 16px 8px;
+  -webkit-transform: skewY(-8deg);
+}
+.index h2 span {
+  display: block;
+  -webkit-transform: skewY(8deg);
+}
+.index h2.we-do {
+  margin-top: 100rem;
+}
+.index h2.hi {
+  margin-top: 60.5rem;
+}
+.index a.email {
+  display: block;
+  color: #fff;
+  margin-top: 40px;
+  text-align: center;
 }

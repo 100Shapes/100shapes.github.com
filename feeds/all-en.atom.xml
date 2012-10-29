@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>100shapes.com</title><link href="http://100shapes.com/" rel="alternate"></link><link href="http://100shapes.com/feeds/all-en.atom.xml" rel="self"></link><id>http://100shapes.com/</id><updated>2012-10-26T19:06:29+01:00</updated><entry><title>Best Friends</title><link href="http://100shapes.com/blog/2012-10-best-friends.html" rel="alternate"></link><updated>2012-10-26T19:06:29+01:00</updated><author><name>100Shapes</name></author><id>tag:100shapes.com,2012-10-26:blog/2012-10-best-friends.html</id><summary type="html">&lt;p&gt;Lorem ipsum dolor sit amet, &lt;a href="www.google.com"&gt;consectetur&lt;/a&gt; adipisicing elit, sed do eiusmod
+<feed xmlns="http://www.w3.org/2005/Atom"><title>100shapes.com</title><link href="http://100shapes.com/" rel="alternate"></link><link href="http://100shapes.com/feeds/all-en.atom.xml" rel="self"></link><id>http://100shapes.com/</id><updated>2012-10-29T00:00:00+00:00</updated><entry><title>Paolo's Post</title><link href="http://100shapes.com/blog/2012-10-paolos-post.html" rel="alternate"></link><updated>2012-10-29T00:00:00+00:00</updated><author><name>100Shapes</name></author><id>tag:100shapes.com,2012-10-29:blog/2012-10-paolos-post.html</id><summary type="html">&lt;h2&gt;in this post&lt;/h2&gt;
+&lt;p&gt;This is a post by me, Paolo Memoli.&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et tortor nec orci porta posuere. Suspendisse facilisis diam in orci molestie sit amet tempor nibh consectetur. Sed luctus mattis nunc eget semper. Duis in libero felis. Nunc a massa lorem, sit amet tincidunt purus. Cras cursus faucibus nisl nec vehicula. Suspendisse potenti. Suspendisse id erat et lacus eleifend varius. Curabitur tincidunt velit quis nisl euismod scelerisque. Sed pharetra, eros vitae gravida congue, nunc ante fermentum lorem, ut molestie magna mauris id lorem. Phasellus fringilla dapibus vulputate. Fusce adipiscing malesuada mattis.&lt;/p&gt;
+&lt;p&gt;Nulla facilisi. Maecenas id nisl leo, nec vulputate eros. In nisi urna, mattis at eleifend porta, mattis non dui. Quisque pellentesque erat ut elit adipiscing quis sodales sem iaculis. Pellentesque rhoncus ultricies augue, at varius lacus blandit ut. Integer vel arcu at ante pharetra tristique bibendum non ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sagittis elementum eleifend. Etiam dignissim, purus quis suscipit ullamcorper, nisl diam euismod sapien, sed posuere risus nunc in enim. Suspendisse velit velit, imperdiet eget mattis ut, malesuada vel neque.&lt;/p&gt;
+&lt;p&gt;Donec bibendum odio in felis auctor mollis. Duis fermentum volutpat augue, in molestie ante pellentesque eget. Sed risus libero, lobortis et rhoncus vel, ullamcorper ac ante. Fusce elementum ante nec risus fringilla mollis. Ut congue pharetra risus vitae mollis. In a lectus urna. Nulla nisl lacus, porta at dapibus vel, iaculis nec nibh. Mauris dictum tortor ac urna laoreet quis pretium nibh pharetra. Maecenas id tellus purus. Suspendisse potenti. &lt;img src="{{ ASSET_URL}}/{{ article.slug }}/dog.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="./static/images/yourimage.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Nullam in arcu vel nisi volutpat commodo consequat at enim. Suspendisse bibendum lobortis mollis. Duis leo elit, tristique et blandit at, porta aliquet mauris. Aenean venenatis malesuada leo eu tincidunt. Sed imperdiet eros neque. Vivamus orci risus, accumsan ut laoreet a, scelerisque a nisi. Donec ac justo enim, adipiscing convallis lorem. Integer interdum tortor facilisis lacus lacinia sollicitudin.&lt;/p&gt;
+&lt;h2&gt;Lists&lt;/h2&gt;
+&lt;h3&gt;Ordered&lt;/h3&gt;
+&lt;p&gt;numbers order doesnt matter&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;This&lt;/li&gt;
+&lt;li&gt;Is&lt;/li&gt;
+&lt;li&gt;A&lt;/li&gt;
+&lt;li&gt;Ordered&lt;/li&gt;
+&lt;li&gt;List&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Unordered&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;This&lt;/li&gt;
+&lt;li&gt;Is&lt;/li&gt;
+&lt;li&gt;An&lt;/li&gt;
+&lt;li&gt;Unordered&lt;/li&gt;
+&lt;li&gt;List&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Block quote&lt;/h2&gt;
+&lt;p&gt;this is a quote:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Paolo, you should make a test post&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;:::PythonLexer
+if res.status_code == requests.codes.ok:
+                gravatar = json.loads(res.text)['entry'][0]
+                GRAVATARS.update({email:gravatar})
+            else:
+                print("Gravatar_plus: no gavitar found");&lt;/p&gt;</summary><category term="Paolo"></category><category term="Testing"></category></entry><entry><title>Best Friends</title><link href="http://100shapes.com/blog/2012-10-best-friends.html" rel="alternate"></link><updated>2012-10-26T19:06:29+01:00</updated><author><name>100Shapes</name></author><id>tag:100shapes.com,2012-10-26:blog/2012-10-best-friends.html</id><summary type="html">&lt;p&gt;Lorem ipsum dolor sit amet, &lt;a href="www.google.com"&gt;consectetur&lt;/a&gt; adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse

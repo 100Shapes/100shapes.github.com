@@ -74,6 +74,11 @@
   -moz-transform: rotate(@deg);
   transform: rotate(@deg);
 }
+.skewY(@deg:5deg){
+  -webkit-transform: skewY(@deg);
+  -moz-transform: skewY(@deg);
+  transform: skewY(@deg);
+}
 .scale(@ratio:1.5){
   -webkit-transform:scale(@ratio);
   -moz-transform:scale(@ratio);
@@ -127,3 +132,4 @@
   -o-filter: @filter;
   -ms-filter: @filter;
 }
+

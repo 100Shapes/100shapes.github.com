@@ -44,8 +44,11 @@ def add_gravatar(generator, metadata):
                             hashlib.md5(metadata['email'].lower()).hexdigest() + '.json'
             res = requests.get(gravatar_profile_url)
             # Example response: http://en.gravatar.com/205e460b479e2e5b48aec07710c08d50.json
-            gravatar = json.loads(res.text)['entry'][0]
-            GRAVATARS.update({email:gravatar})
+            if res.status_code == requests.codes.ok:
+                gravatar = json.loads(res.text)['entry'][0]
+                GRAVATARS.update({email:gravatar})
+            else:
+                print("Gravatar_plus: no gavitar found");
         
         metadata["author_gravatar"] = gravatar['thumbnailUrl']
         metadata["author_name"] = gravatar['displayName']

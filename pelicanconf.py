@@ -41,6 +41,7 @@ FILES_TO_COPY = (
 	('extras/CNAME', 'CNAME'),
 	('extras/README.md', 'README.md'),
 	('extras/favicon.ico', 'favicon.ico'),
+	('extras/googleaf3c93f2dd1ba5f3.html', 'googleaf3c93f2dd1ba5f3.html'),
 )
 STATIC_PATHS = ('assets',)
 

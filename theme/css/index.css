@@ -21,17 +21,21 @@
   margin-top: 10rem;
 }
 .index h2 {
+  -webkit-transform: skewY(-8deg);
+  -moz-transform: skewY(-8deg);
+  transform: skewY(-8deg);
   color: #fff;
   font-family: 'MisoRegular';
   outline: 4px solid #fff;
   width: 155px;
   margin: 0 auto;
   padding: 16px 8px;
-  -webkit-transform: skewY(-8deg);
 }
 .index h2 span {
-  display: block;
   -webkit-transform: skewY(8deg);
+  -moz-transform: skewY(8deg);
+  transform: skewY(8deg);
+  display: block;
 }
 .index h2.we-do {
   margin-top: 100rem;

@@ -23,9 +23,10 @@
             <link rel="stylesheet" href="{{ SITEURL }}/theme/css/base.css" />
             <link rel="stylesheet" href="{{ SITEURL }}/theme/css/article.css" />
             <link rel="stylesheet" href="{{ SITEURL }}/theme/css/page.css" />
+            <link rel="stylesheet" href="{{ SITEURL }}/theme/css/index.css" />
             <link rel="stylesheet" href="{{ SITEURL }}/theme/css/responsive.css" />
         {% else %}    
-            {% assets filters="cssmin", output="css/output.css", "css/reset.css", "css/base.css", "css/article.css", "css/page.css", "css/responsive.css" %}
+            {% assets filters="cssmin", output="css/output.css", "css/reset.css", "css/index.css", "css/base.css", "css/article.css", "css/page.css", "css/responsive.css" %}
                 <link rel="stylesheet" href="{{ ASSET_URL }}">
             {% endassets %}    
         {% endif %}

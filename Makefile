@@ -72,6 +72,6 @@ ftp_upload: publish
 github: publish
 	ghp-import $(OUTPUTDIR)
 	git push origin master
-	s3cmd sync --delete-removed output/static/assets s3://ohs-site
+	s3cmd sync --delete-removed output/static/assets s3://media.100shapes.com
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload github

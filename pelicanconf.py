@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
+import os
 
 AUTHOR = u"100Shapes"
 SITENAME = u"100shapes.com"
-SITEURL = ''
+print('SETTING SITE PATH TO: %s' % os.getcwd())
+SITE_URL = os.getcwd() + '/output'
 
 PRODUCTION = False
 

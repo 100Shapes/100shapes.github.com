@@ -1,14 +1,14 @@
 <nav>
 	<ol>
 		<li>
-			<a href="{{ SITE_URL}}/" title="100Shapes home">Home</a>
+			<a href="{{ SITE_URL }}/" title="100Shapes home">Home</a>
 		</li>
 		<li>
-			<a href="{{ SITE_URL}}/blog/" title="100Shapes blog">Blog</a>
+			<a href="{{ SITE_URL }}/blog/" title="100Shapes blog">Blog</a>
 		</li>
 		{% for page in pages %}
 		<li>
-			<a href="{{ SITE_URL}}/{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
+			<a href="{{ SITE_URL }}/{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
 		</li>				
 		{% endfor %}
 	</ol>

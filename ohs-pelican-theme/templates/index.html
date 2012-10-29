@@ -22,6 +22,12 @@
 
 <path style="stroke: #fff;stroke-width: 8;fill: none;" d="M400,1742.967"/>
 
+
+<footer>
+	{% from 'macros.html' import article_list with context %}
+	{{ article_list(articles, 'Blog') }}
+</footer>
+
 {% endblock content %}
 
 {% block pageTitle %}

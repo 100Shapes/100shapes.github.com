@@ -15,6 +15,8 @@ ARTICLE_URL = ARTICLE_SAVE_AS
 PAGE_SAVE_AS = '{slug}/index.html'
 PAGE_URL = '{slug}/'
 
+MD_EXTENSIONS = ['codehilite', 'extra', 'meta',]
+
 # Turn off things we don't want
 AUTHOR_SAVE_AS = False
 CATEGORY_SAVE_AS = False

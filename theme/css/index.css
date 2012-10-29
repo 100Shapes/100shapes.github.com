@@ -3,6 +3,9 @@
   position: relative;
   width: 100%;
 }
+.index footer {
+  display: none;
+}
 .index .content {
   width: auto;
 }
@@ -48,4 +51,19 @@
   color: #fff;
   margin-top: 40px;
   text-align: center;
+}
+.index .article-list {
+  background-color: #eeeeee;
+  padding: 2.5rem 0 4rem;
+  margin-top: 15rem;
+}
+.index .article-list h2 {
+  -webkit-transform: none;
+  -moz-transform: none;
+  transform: none;
+  outline: none;
+  padding: 0;
+  width: auto;
+  color: #666666;
+  margin-bottom: 2.5rem;
 }

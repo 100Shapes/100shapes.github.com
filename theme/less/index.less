@@ -5,6 +5,10 @@
 	position: relative;
 	width: 100%;
 
+	footer {
+		display: none;
+	}
+
     .content {
     	width: auto;
     }
@@ -53,5 +57,22 @@
 		color: #fff;
 		margin-top:40px;
 		text-align: center;
+	}
+
+	.article-list {
+		background-color: @background-color-light;
+		padding: @ws-unit*5 0 @ws-unit*8;
+		margin-top: @ws-unit*30;
+
+		h2 {
+			-webkit-transform: none;
+			-moz-transform: none;
+			transform: none;
+			outline: none;
+			padding: 0;
+			width: auto;
+			color: @header-color-dark;
+			margin-bottom: @ws-unit*5;
+		}
 	}
 }

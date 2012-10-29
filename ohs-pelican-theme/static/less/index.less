@@ -1,0 +1,57 @@
+@import "vars";
+
+.index {
+	background-image: url('../img/background_long.jpg');
+	position: relative;
+	width: 100%;
+
+    .content {
+    	width: auto;
+    }
+
+	svg {
+		margin: 0 auto;
+		position: absolute;
+		width: 800px;
+		height: 3000px;
+		top: 0;
+		left: 50%;
+		margin-left: -400px;
+	}
+
+	h1 {
+		background: none;
+		font-family: 'MisoRegular';
+		margin-top: @ws-unit*20;
+	}
+
+	h2 {
+		color: #fff;
+		font-family: 'MisoRegular';
+		outline: 4px solid #fff;
+		width: 155px;
+		margin: 0 auto;
+		padding: 16px 8px;
+		-webkit-transform: skewY(-8deg);
+
+		span {
+			display: block;
+		    -webkit-transform: skewY(8deg);
+		}
+	
+		&.we-do {
+			margin-top: @ws-unit*200;
+		}
+
+		&.hi {
+			margin-top: @ws-unit*121;
+		}
+	}
+
+	a.email {
+		display: block;
+		color: #fff;
+		margin-top:40px;
+		text-align: center;
+	}
+}

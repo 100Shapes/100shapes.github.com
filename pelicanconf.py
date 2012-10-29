@@ -4,8 +4,8 @@ import os
 
 AUTHOR = u"100Shapes"
 SITENAME = u"100shapes.com"
-print('SETTING SITE PATH TO: %s' % os.getcwd())
-SITE_URL = os.getcwd() + '/output'
+# print('SETTING SITE PATH TO: %s' % os.getcwd())
+# SITE_URL = os.getcwd() + '/output'
 
 PRODUCTION = False
 

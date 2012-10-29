@@ -40,6 +40,7 @@ SITEMAP_SAVE_AS = 'sitemap.xml'
 FILES_TO_COPY = (
 	('extras/CNAME', 'CNAME'),
 	('extras/README.md', 'README.md'),
+	('extras/favicon.ico', 'favicon.ico'),
 )
 STATIC_PATHS = ('assets',)
 

@@ -19,4 +19,4 @@ RELATIVE_URLS = False
 GOOGLE_ANALYTICS = "UA-27923958-2"
 
 # USe S3 bucket
-ASSET_URL = 'http://ohs-site.s3-website-eu-west-1.amazonaws.com/assets'
+ASSET_URL = 'http://media.100shapes.com/assets'

@@ -28,6 +28,11 @@
 	{{ article_list(articles, 'Blog') }}
 </footer>
 
+{% block scripts %}
+	{% include "jquery.html" %}
+	<script src="{{ SITE_URL }}/theme/js/index/main.js"></script>
+{% endblock %}
+
 {% endblock content %}
 
 {% block pageTitle %}

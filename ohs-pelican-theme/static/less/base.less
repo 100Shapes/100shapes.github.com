@@ -40,14 +40,20 @@ body {
 }
 
 nav {
-	.inner-shadow(0px, -@ws-unit, @ws-unit, 0.5);
-	background-color: @background-color-dark;
-	padding: @ws-unit*1.5 @ws-unit*3 @ws-unit*1.5;
+	background-color: @background-color-light;
+	padding: @ws-unit*4 @ws-unit*4 @ws-unit*4;
 
 	a {
-		color: #fff;
+		color:#b45998;
 		font-family: 'MisoRegular';
 		font-weight: normal;
+		font-size: 22px;
+		letter-spacing: 1px;
+
+		&:hover {
+			opacity: 0.8;
+			text-decoration: none;
+		}
 	}
 
 	ol {
@@ -57,15 +63,16 @@ nav {
 	}
 
 	li {
-		padding: 0;
+		padding: 0 @ws-unit*2;
 		list-style-type: none;
 		display: inline;
 	
 		&:first-child {
 			float: left;
+			padding: 0;
 		}
 		&:last-child {
-			margin-left: @ws-unit*2;
+			
 		}
 	}
 }

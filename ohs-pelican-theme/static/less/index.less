@@ -1,9 +1,13 @@
 @import "vars";
 
 .index {
-	background-image: url('../img/Background_long.jpg');
+	background-image: url('../img/bronze_header.jpg');
 	position: relative;
 	width: 100%;
+
+	nav {
+		background-color: none;
+	}
 
 	footer {
 		display: none;
@@ -23,10 +27,17 @@
 		margin-left: -400px;
 	}
 
+	.logo {
+		width: @ws-unit*27;
+		margin: 0 auto;
+
+	}
+
 	h1 {
 		background: none;
 		font-family: 'MisoRegular';
-		margin-top: @ws-unit*20;
+		margin-top: @ws-unit*14;
+		display: none;
 	}
 
 	h2 {

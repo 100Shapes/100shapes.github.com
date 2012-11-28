@@ -41,7 +41,6 @@ body {
 
 nav {
 	background-color: @background-color-light;
-	padding: @ws-unit*4 @ws-unit*4 @ws-unit*4;
 
 	a {
 		color:#b45998;
@@ -57,7 +56,7 @@ nav {
 	}
 
 	ol {
-		margin: 0;
+		margin: @ws-unit*2;
 		padding: 0;
 		text-align: right;
 	}
@@ -66,13 +65,14 @@ nav {
 		padding: 0 @ws-unit*2;
 		list-style-type: none;
 		display: inline;
+		float: left;
 	
 		&:first-child {
-			float: left;
-			padding: 0;
+		
 		}
+		
 		&:last-child {
-			
+			float: right
 		}
 	}
 }

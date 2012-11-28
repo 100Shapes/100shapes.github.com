@@ -1,17 +1,18 @@
 <nav>
 	<ol>
 		<li>
-			<a href="{{ SITE_URL }}/" title="100Shapes home"><img src="{{ SITEURL }}/theme/img/logo_small.png"></img></a>
+			<a href="{{ SITE_URL }}/blog/" title="100Shapes Services">who we are</a>
 		</li>
 		<li>
-			<a href="{{ SITE_URL }}/blog/" title="100Shapes blog">blog</a>
+			<a href="{{ SITE_URL }}/blog/" title="100Shapes Work">work</a>
 		</li>
 		<li>
-			<a href="{{ SITE_URL }}/blog/" title="100Shapes blog">about</a>
+			<a href="{{ SITE_URL }}/blog/" title="100Shapes Contact">get in touch</a>
 		</li>
-		<li>
-			<a href="{{ SITE_URL }}/blog/" title="100Shapes blog">contact</a>
+		<li class="logo">
+			<a href="{{ SITE_URL }}/" title="100Shapes home">100shapes</a>
 		</li>
+		
 		{% for page in pages %}
 		<li>
 			<a href="{{ SITE_URL }}/{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>

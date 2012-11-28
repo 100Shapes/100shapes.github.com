@@ -5,29 +5,42 @@
 {% block pageDescription %}100Shapes{% endblock %}
 
 {% block content %}
-
-<div class="logo">
+<!-- <img class="background" src="{{ SITEURL }}/theme/img/back_pattern2.jpg"></img>
+ -->
+<section class="intro">
 	<img src="{{ SITEURL }}/theme/img/100shapes.png"></img>
-</div>		
+	<p>This is the strap line</p>
+</section>
 
-<h2 class="we-do"><span>We design for you</span></h2>
+<section class="about">
+	<div class="container">
+		<h2>Let's go on a journey</h2>
+		<p>100 Shapes is a small, passionate team of designers and developers that helps startups and established companies plan, design and build digital products. To us, good considered design is the key to success, so we focus on execution and the important little details. We work closely with our clients to create brilliant websites, services and online products. Design is not just what it looks like. Design is how it works.</p>
+		<h4>Looking for something designed?</h4><button type="button">Get in touch!</button>
+	</div>
+</section>
 
-<h2 class="hi"><span>Say Hi</span></h2>
+<section class="portfolio">
+	<div class="moo">
+		<h2>Testing Moo.com</h2>
+		<p>We carried out in depth usability testing for MOO’s brand new Quick & Easy tool. Working closely with the MOO design team we crafted, organised one on one indepth interviews with potential customers and helped the Moo team figure out what was working and what needed a little tweaking.</p>
+		<button type="button">Read more</button>
+	</div>
+</section>
 
-<a href="mailto:hi@100shapes.com" title="Email 100Shapes" class="email">hi@100shapes.com</a>
-<svg data-speed="0.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
-
-<path style="stroke: #fff;stroke-width: 8;fill: none;" d="M400,300v725c0,70,17,107-142,188c0,0-253,110-253,387c0,238.677,149.23,327.38,309,380.622"/>
-
-<path style="stroke: #fff;stroke-width: 8;fill: none;" d="M487,2003 c 165,61,313,180,313,429c0,288-230,400-294,436s-160,85-160,218"/>
-
-<path style="stroke: #fff;stroke-width: 8;fill: none;" d="M400,1742.967"/>
-
-
-<footer>
-	{% from 'macros.html' import article_list with context %}
-	{{ article_list(articles, 'Blog') }}
-</footer>
+<section class="contact">
+	<div class="container">
+		<h2>How about a chat</h2>
+		<div class="text">
+			<p>To really get a sense of what 100 Shapes are all about and what we could do for you, why not come in and see us? Or, we could come to you	. To arrange a time, email</p>
+			<a href="mailto:chris@100shapes.com" title="chris@100shapes.com" class="email"><h4>chris@100shapes.com</h4></a>
+		</div>
+		<div class="buttons">
+			<button type="button" class="facebook"></button>
+			<button type="button" class="facebook"></button>
+		</div>
+	</div>
+</section>
 
 {% block scripts %}
 	{% include "jquery.html" %}

@@ -1,25 +1,33 @@
 @import "vars";
 @font-face {
     font-family: 'Miso';
-    src: url('./miso_bold_macroman/miso-bold-webfont.eot');
-    src: url('./miso_bold_macroman/miso-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./miso_bold_macroman/miso-bold-webfont.woff') format('woff'),
-         url('./miso_bold_macroman/miso-bold-webfont.ttf') format('truetype'),
-         url('./miso_bold_macroman/miso-bold-webfont.svg#MisoRegular') format('svg');
+    src: url('./miso/bold.eot');
+    src: url('./miso/bold.eot?#iefix') format('embedded-opentype'),
+         url('./miso/bold.woff') format('woff'),
+         url('./miso/bold.ttf') format('truetype'),
+         url('./miso/bold.svg#MisoBold') format('svg');
     font-weight: @bold;
     font-style: normal;
-
 }
 @font-face {
     font-family: 'Miso';
-    src: url('./miso_regular_macroman/miso-regular-webfont.eot');
-    src: url('./miso_regular_macroman/miso-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./miso_regular_macroman/miso-regular-webfont.woff') format('woff'),
-         url('./miso_regular_macroman/miso-regular-webfont.ttf') format('truetype'),
-         url('./miso_regular_macroman/miso-regular-webfont.svg#MisoRegular') format('svg');
+    src: url('./miso/regular.eot');
+    src: url('./miso/regular.eot?#iefix') format('embedded-opentype'),
+         url('./miso/regular.woff') format('woff'),
+         url('./miso/regular.ttf') format('truetype'),
+         url('./miso/regular.svg#MisoRegular') format('svg');
     font-weight: @regular;
     font-style: normal;
-
+}
+@font-face {
+    font-family: 'Miso';
+    src: url('./miso/light.eot');
+    src: url('./miso/light.eot?#iefix') format('embedded-opentype'),
+         url('./miso/light.woff') format('woff'),
+         url('./miso/light.ttf') format('truetype'),
+         url('./miso/light.svg#MisoLight') format('svg');
+    font-weight: @light;
+    font-style: normal;
 }
 a {
 	font-weight: 600; 
@@ -50,8 +58,8 @@ nav {
 
 	a {
 		color:#b45998;
-		font-family: 'MisoRegular';
-		font-weight: normal;
+		font-family: @font-family-headings;
+		font-weight: @regular;
 		font-size: 22px;
 		letter-spacing: 1px;
 
@@ -100,6 +108,7 @@ h1 {
 h2 {
 	font-size: @ws-unit * 2.4;
 	line-height: @ws-unit * 2.5;
+	color: @header-color-pink;
 }
 
 

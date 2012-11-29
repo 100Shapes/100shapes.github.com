@@ -39,6 +39,10 @@ body {
 	line-height: 1.5;
 }
 
+.container {
+	.makeContainer;
+}
+
 nav {
 	.clearfix;
 	background-color: @background-color-light;
@@ -59,21 +63,21 @@ nav {
 	ol {
 		.makeContainer;
 		padding:@ws-unit 0;
-		text-align: right;
 	}
 
 	li {
-		padding: 0 @ws-unit*2;
 		list-style-type: none;
-		display: inline;
 		float: left;
+		display: inline;
+		margin-right: @ws-unit*2;
 	
 		&:first-child {
-		
+			margin-left: @ws-unit/2;
 		}
 		
 		&:last-child {
-			float: right
+			float: right;
+			margin-right: @ws-unit/2;
 		}
 	}
 }
@@ -81,19 +85,15 @@ nav {
 h1, h2, h3, h4, h5, h6 {
 	font-family: @font-family-headings;
 	color: @header-color-dark;
-	text-align: center;
 }
 
 h1 {
 	color: @header-color-light;
-	font-size: @ws-unit * 7.5;
-	line-height: @ws-unit * 8;
-	background: @header-background-color url('../img/bronze_header.jpg') left center no-repeat;
+	font-size: @ws-unit * 2.4;
+	line-height: @ws-unit * 2.5;
 	color: @header-color-light;
 	font-weight: normal;
 	margin: 0;
-	padding-left: @ws-unit*3;
-	padding-right: @ws-unit*3;
 }
 
 h2 {

@@ -1,43 +1,51 @@
 {% extends "base.html" %}
 
+
+
+
+
+
+
 {% block content %}
-<article>
+
+<h1>{{ article.title }}</h1>
+<section class="content">
+	<article>
 	<address class="vcard author">
 
-		<span class="clip">
-			<img class="photo" alt="profile picture of {{ article.author_name }}" src="{{ article.author_gravatar }}?s=72" width="72" height="72">
-		</span>
-		<span class="fn">{{ article.author_name }}</span>
+	<span class="clip">
+	<img class="photo" alt="profile picture of {{ article.author_name }}" src="{{ article.author_gravatar }}?s=72" width="72" height="72">
+	</span>
+	<span class="fn">{{ article.author_name }}</span>
 
 	</address>
 
 	<h2>{{ article.subtitle }}</h2>
-	
+
 	<section role="main">
 	{{ article.content }}
 	</section>
 
 	<footer role="complementary">
-		{% include 'share_tools.html' with context %}
+	{% include 'share_tools.html' with context %}
 
-		{% include 'tags_list.html' with context %}
+	{% include 'tags_list.html' with context %}
 
-		{% if article.related_posts %}
-			{% from 'macros.html' import article_list with context %}
-			{{ article_list(article.related_posts, 'More Articles') }}
-	    {% endif %}
+	{% if article.related_posts %}
+	{% from 'macros.html' import article_list with context %}
+	{{ article_list(article.related_posts, 'More Articles') }}
+	{% endif %}
 
 	</footer>
-</article>
+	</article>
+
+</section>
+
 {% endblock %}
 
 {% block pageTitle %}
 	{{ article.title }}
 {% endblock pageTitle %}
-
-{% block pageHeading %}
- 	{{ article.title }}
-{% endblock pageHeading %}
 
 {% block author %}{{ article.author_name }}{% endblock author %}
 

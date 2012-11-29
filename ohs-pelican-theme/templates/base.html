@@ -44,11 +44,8 @@
 
         {% include 'global_nav.html' %}
 
-        <h1>{% block pageHeading %}{% endblock pageHeading %}</h1>
+        {% block content %}{% endblock %}
 
-        <section class="content">
-            {% block content %}{% endblock %}
-        </section>
 
         {% include 'footer.html' %}
         

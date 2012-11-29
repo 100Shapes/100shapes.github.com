@@ -1,8 +1,8 @@
+{% macro share_tools(url) -%}
 <div class="share-tools">
-	<h2>Share this Article</h2>
 	<ol>
 		<li>
-			<a href="http://www.facebook.com/share.php?u={{ Site_URL }}/{{ article.url }}" onclick="return fb_like()" target="_blank" title="Share on Facebook" class="share-fb"><span>Facebook</span></a>
+			<a href="http://www.facebook.com/share.php?u={{ url }}" onclick="return fb_like()" target="_blank" title="Share on Facebook" class="share-fb"><span>Facebook</span></a>
 		</li>
 		<li>
 			<a href="http://twitter.com/share" target="_blank" title="Share on Twitter" class="share-tw"><span>Twitter</span></a>
@@ -37,3 +37,4 @@
 	}
 })();
 </script>
+{%- endmacro %}

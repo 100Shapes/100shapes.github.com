@@ -146,4 +146,50 @@ footer {
 		margin-top: @ws-unit*3;
 	}
 }
+.share-tools {
+
+	.column(12);
+
+	ol {
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style: none;
+		display: inline-block;
+		margin:0 @ws-unit;
+	}
+	h2 {
+		.visuallyhidden();
+	}
+	a {
+		.rounded(@ws-unit*8);
+		background-image: url('../img/social_sprite.png');
+		background-repeat: no-repeat;
+		display: block;
+		height: 48px;
+		width: 42px;
+		&:hover {
+			.box-shadow(inset 0px 0px 5px rgba(0,0,0,0.5));
+			}
+	}
+	span {
+		display: none;
+	}
+
+	
+	.share-fb {
+		background-position: -3px 0px;
+		background-color: #5b78a6;
+	}
+	.share-tw {
+		background-position: -54px 0px;
+		background-color: #77cced;
+	}
+	.share-pt {
+		background-position: -104px 0px;
+		background-color: #bf4751;
+	}
+}
 

@@ -4,19 +4,79 @@
 
 .index {
 
+	h1 {
+		margin-top: @ws-unit*14;
+		display: none;
+	}
+
+	h2 {
+		color: #c47382;
+		text-align: left;
+		font-size: 48px;
+		font-weight: normal;
+		margin: 18px 0;
+	}
+
+	h3 {
+		color: #fff;
+	}
+
+	h4 {
+		color: #999;
+		font-size: 24px;
+		font-weight: @light;
+		padding-right:20px;
+	}
+
+	p {
+		color: #999;
+		line-height: 24px;
+		font-size: 14px;
+		font-weight: 100;
+
+	}
+
+	.button-primary {
+		.rounded(3px);
+		color: #fff;
+		background-color: @header-color-pink;
+		font-family: @font-family-headings;
+		font-size: 24px;
+		font-weight: @light;
+		border: none;
+		padding: 6px 9px;
+		text-decoration: none;
+
+
+		&:hover{
+			background-color: @background-color-highlight;
+		}
+
+
+	}
+
+	a.email {
+		display: block;
+		color: #fff;
+		margin-top:40px;
+		text-align: center;
+	}
+
 	.content {
     	width: auto;
     	padding-top: 0;
     }
 
 	nav {
+		.transition(0.2s);
 		background-color: transparent;
 		position: fixed;
 		width: 100%;
 			
 		a {
+			.transition(0.2s);
 			color: #fff;
-			font-weight: 100;
+			font-weight: @light;
 		}
 	}
 
@@ -42,7 +102,7 @@
 
 			.button-primary {
 				background-color: #fff;
-				color: @header-color-light;
+				color: @header-color-pink;
 			}
 		}
 
@@ -67,7 +127,6 @@
 			background: url('../img/portfolio.jpg');
 			background-size:100% 100%;
 			background-repeat: no-repeat;
-
 			height: @section-height;
 
 			h2 {
@@ -79,7 +138,8 @@
 			}
 
 			.moo {
-				padding: 236px 180px;
+				margin: 0 auto;
+				padding: 236px 640px 0 0;
 				width: 300px;
 			}
 			
@@ -133,7 +193,6 @@
 					display: inline-block;
 					text-align: center;
 
-
 					span {
 						.opacity(0);
 						padding: 0;
@@ -142,7 +201,7 @@
 					}
 
 					&:hover{
-						background-color: @header-color-light;
+						background-color: @header-color-pink;
 						span {
 							.opacity(1)
 					
@@ -150,76 +209,22 @@
 					}
 					
 					&.facebook{
-						background-image: url('../img/facebook_icon.png');
+						background-image: url('../img/facebook_icon_dark.png');
+						
+						&:hover{
+							background-image: url('../img/facebook_icon.png');
+						}
 					}
 
 					&.twitter{
-						background-image: url('../img/twitter_icon.png');
+						background-image: url('../img/twitter_icon_dark.png');
+					
+						&:hover{
+							background-image: url('../img/twitter_icon.png');
+						}
 					}
 				}
 			}	
 		}
 	}
-
-
-	h1 {
-		margin-top: @ws-unit*14;
-		display: none;
-	}
-
-	h2 {
-		color: #c47382;
-		text-align: left;
-		font-size: 48px;
-		font-weight: normal;
-		margin: 18px 0;
-	}
-
-	h3 {
-		color: #fff;
-	}
-
-	h4 {
-		color: #999;
-		font-size: 24px;
-		font-weight: 100;
-		padding:2px 20px 0 0;
-	}
-
-	p {
-		color: #999;
-		line-height: 24px;
-		font-size: 14px;
-		font-weight: 100;
-
-	}
-
-	.button-primary {
-		.opacity(.8);
-		.rounded(3px);
-		.transition();
-		color: #fff;
-		background-color: @header-color-light;
-		font-family: @font-family-headings;
-		font-size: 24px;
-		font-weight: @regular;
-		border: none;
-		padding: 6px 9px;
-		text-decoration: none;
-
-
-		&:hover{
-			.opacity(1);
-		}
-
-
-	}
-
-	a.email {
-		display: block;
-		color: #fff;
-		margin-top:40px;
-		text-align: center;
-	}
-
 }

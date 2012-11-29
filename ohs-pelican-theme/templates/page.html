@@ -1,21 +1,34 @@
 {% extends "base.html" %}
-
 {% block pageTitle %}{{ page.title }}{%endblock%}
+
+{% block extraHead %}
+	<style type="text/css">
+		.promo-box {
+			background-image: url("{{ ASSET_URL }}/user-testing/header-promo.jpg");
+		}
+	</style>
+{% endblock extraHead %}
 
 
 {% block content %}
 
+	
+
 	<div class="promo-box">
 		<div class="container">
-		<div class="content-panel">
-			<h1>{{ page.title }}</h1>
-			<p>{{ page.intro }}</p>
+			<div class="content-panel">
+				<h1>{{ page.title }}</h1>
+				<p>{{ page.intro }}</p>
+			</div>
 		</div>
-		</div>
+		<img src="">
 	</div>
 
-    {{ page.content }}
+	<div class="content">
+		{{ page.content }}
+	</div>
 
+    
 
 
 

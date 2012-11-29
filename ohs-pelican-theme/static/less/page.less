@@ -2,6 +2,44 @@
 
 .page {
 	.promo-box {
-		background: black;
+		background-color: black;
+		position: relative;
+		background-size: 100% 100%;
+
+		img {
+			min-height: 100%;
+			min-width: 100%;
+			position: absolute;
+			top: 0;
+		}
+
+		p {
+			color: white;
+		}
+
+		.container {
+			position: relative;
+			z-index: 2;
+		}
+
+		.content-panel {
+			.column(4);
+			margin-top: @ws-unit*10;
+			margin-bottom: @ws-unit*9;
+		}
+	}
+
+	.content {
+		margin-top: @ws-unit*4;
+	}
+
+	section {
+		.column(8);
+		margin-bottom: @ws-unit*5;
+
+		&.right {
+			text-align: right;
+			.push(4);
+		}
 	}
 }

@@ -39,7 +39,7 @@ body {
 	line-height: 1.5;
 }
 
-.container {
+.container, .content {
 	.makeContainer;
 }
 
@@ -85,20 +85,19 @@ nav {
 h1, h2, h3, h4, h5, h6 {
 	font-family: @font-family-headings;
 	color: @header-color-dark;
+	margin: 0;
 }
 
 h1 {
 	color: @header-color-light;
 	font-size: @ws-unit * 2.4;
 	line-height: @ws-unit * 2.5;
-	color: @header-color-light;
 	font-weight: normal;
-	margin: 0;
 }
 
 h2 {
-	font-size: @ws-unit * 4.5;
-	line-height: @ws-unit * 5;
+	font-size: @ws-unit * 2.4;
+	line-height: @ws-unit * 2.5;
 }
 
 
@@ -108,12 +107,6 @@ header {
 footer {
 	margin: @ws-unit*8 0 @ws-unit*6;
 	text-align: center;
-}
-
-.content {
-	padding-top: @ws-unit*6;
-	width: @ws-unit*90;
-	margin: 0 auto;
 }
 
 .article-list {

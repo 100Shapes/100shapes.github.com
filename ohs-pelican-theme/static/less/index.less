@@ -47,7 +47,7 @@
 		&.about{
 			height: @section-height;
 			background-color: #eee;
-			padding: @ws-unit*28;
+			padding-top: @ws-unit*28;
 
 			.container{
 				width: 460px;
@@ -84,11 +84,12 @@
 		}
 
 		&.contact{
+			padding-top: 244px;
 			
 			.container{
 				height: @section-height;
 				width: 620px;
-				margin: 244px auto;
+				margin: 0 auto;
 
 				.text{
 					width: 300px;
@@ -129,7 +130,6 @@
 					font-size: 14px;
 					display: inline-block;
 					text-align: center;
-					text-decoration: none;
 
 
 					span {
@@ -206,6 +206,8 @@
 		font-weight: 100;
 		border: none;
 		padding: 6px 9px;
+		text-decoration: none;
+
 
 		&:hover{
 			.opacity(1);

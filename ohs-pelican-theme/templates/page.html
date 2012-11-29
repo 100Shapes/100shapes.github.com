@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% import "share_tools.html" as share_tools %}
+
 {% block pageTitle %}{{ page.title }}{%endblock%}
 
 {% block extraHead %}
@@ -26,6 +28,8 @@
 
 	<div class="content">
 		{{ page.content }}
+
+		{{ share_tools.share_tools(SITEURL + page.slug) }}
 	</div>
 
     

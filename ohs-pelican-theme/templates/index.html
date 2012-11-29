@@ -7,42 +7,42 @@
 {% block content %}
 <!-- <img class="background" src="{{ SITEURL }}/theme/img/back_pattern2.jpg"></img>
  -->
-<section class="intro">
+<div class="intro">
 	<div class="container">
 		<img src="{{ SITEURL }}/theme/img/100shapes.png"></img>
 	</div>
 	<p>We turn good ideas into great products</p>
-</section>
+</div>
 
-<section class="about">
+<div class="about">
 	<div class="container">
 		<h2>Let's go on a journey</h2>
 		<p>100 Shapes is a small, passionate team of designers and developers that helps startups and established companies plan, design and build digital products. To us, good considered design is the key to success, so we focus on execution and the important little details. We work closely with our clients to create brilliant websites, services and online products. Design is not just what it looks like. Design is how it works.</p>
-		<h4>Looking for something designed?</h4><button type="button">Get in touch!</button>
+		<h4>Looking for something designed?</h4><a class="button-primary" href="#">Get in touch!</a>
 	</div>
-</section>
+</div>
 
-<section class="portfolio">
+<div class="portfolio">
 	<div class="moo">
 		<h2>Testing Moo.com</h2>
 		<p>We carried out in depth usability testing for MOO’s brand new Quick & Easy tool. Working closely with the MOO design team we crafted, organised one on one indepth interviews with potential customers and helped the Moo team figure out what was working and what needed a little tweaking.</p>
-		<button type="button">Read more</button>
+		<a class="button-primary" href="#">Read more</a>
 	</div>
-</section>
+</div>
 
-<section class="contact">
+<div class="contact">
 	<div class="container">
 		<h2>How about a chat</h2>
 		<div class="text">
-			<p>To really get a sense of what 100 Shapes are all about and what we could do for you, why not come in and see us? Or, we could come to you	. To arrange a time, email</p>
+			<p>To really get a sense of what 100 Shapes are all about and what we could do for you, why not come in and see us? Or, we could come to you. To arrange a time, email</p>
 			<a href="mailto:chris@100shapes.com" title="chris@100shapes.com" class="email">chris@100shapes.com</a>
 		</div>
 		<div class="buttons">
-			<a href="facebook"></a><button type="button" class="facebook"><p>/100shapes</p></button></a>
-			<a href="twitter"></a><button type="button" class="twitter"><p>@100shapes</p></button></a>
+			<a href="facebook" class="button-primary facebook"><span>/100shapes</span></a>
+			<a href="twitter" class="button-primary twitter"><span>@100shapes</span></a>
 		</div>
 	</div>
-</section>
+</div>
 
 {% block scripts %}
 	{% include "jquery.html" %}

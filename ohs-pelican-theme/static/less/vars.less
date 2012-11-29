@@ -1,3 +1,4 @@
+@import "grid";
 @import "elements";
 
 @background-color-light: #eee;
@@ -14,7 +15,7 @@
 @header-color-light: #fff;
 @header-color-dark: #666;
 
-@ws-unit: 1rem / 2;
+@ws-unit: @gutter-width * 1px;
 
 @light-grey-color: #ccc;
 
@@ -29,4 +30,10 @@
     padding: 0;
     position: absolute;
     width: 1px;
+}
+
+.makeContainer() {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
 }

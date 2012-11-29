@@ -40,6 +40,7 @@ body {
 }
 
 nav {
+	.clearfix;
 	background-color: @background-color-light;
 
 	a {
@@ -56,8 +57,8 @@ nav {
 	}
 
 	ol {
-		margin: @ws-unit*2;
-		padding: 0;
+		.makeContainer;
+		padding:@ws-unit 0;
 		text-align: right;
 	}
 

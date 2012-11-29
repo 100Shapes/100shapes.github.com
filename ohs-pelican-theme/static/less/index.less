@@ -1,6 +1,7 @@
 @import "vars";
 
 @section-height:850px;
+@light-pink:#e6808e;
 
 .index {
 
@@ -28,19 +29,24 @@
 			background: url('../img/top.jpg');
 			background-size:100% 100%;
 			height: @section-height;
+			text-align: center;
 
 			.container{
 				width: 212px;
 				margin: 0 auto;
 				padding-top: 320px;
-				padding-bottom: 30px;
 			}
 
 			p {
 				color: #fff;
-				text-align: center;
 				font-size: 16px;
 				font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Arial";
+				margin: 15px 0 20px 0;
+			}
+
+			.button-primary {
+				background-color: #fff;
+				color: @light-pink;
 			}
 		}
 
@@ -140,7 +146,7 @@
 					}
 
 					&:hover{
-						background-color: #e6808e;
+						background-color: @light-pink;
 						span {
 							.opacity(1)
 					
@@ -200,7 +206,7 @@
 		.rounded(3px);
 		.transition();
 		color: #fff;
-		background-color: #e6808e;
+		background-color: @light-pink ;
 		font-family: 'MisoRegular';
 		font-size: 24px;
 		font-weight: 100;

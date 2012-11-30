@@ -72,13 +72,33 @@
 		background-color: transparent;
 		position: fixed;
 		width: 100%;
+		border-bottom-width: 1px;
+		border-bottom-color: #E8E5E5;
 			
 		a {
 			.transition(0.2s);
 			color: #fff;
 			font-weight: @light;
 		}
+
+		.nav-logo {
+			width: 90px;
+			height: 27px;
+			background-image: url('../img/logo_small_white.png');
+			background-position: 0px 4px;
+			background-repeat: no-repeat;
+			display: block;
+
+			span {
+				display: none;
+			}
+		}
 	}
+
+	footer {
+	margin: 0 0 @ws-unit*6;
+	
+	}	
 
 	div {
 		&.intro {
@@ -123,7 +143,7 @@
 			
 		}
 
-		&.portfolio{
+		&.work{
 			background: url('../img/portfolio.jpg');
 			background-size:100% 100%;
 			background-repeat: no-repeat;
@@ -149,7 +169,7 @@
 			padding-top: 250px;
 			
 			.container{
-				height: (@section-height)-250;
+				height: (@section-height)-350;
 				width: 620px;
 				margin: 0 auto;
 

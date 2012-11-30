@@ -1,25 +1,13 @@
 {% extends "base.html" %}
 
-
-
-
-
-
-
 {% block content %}
+<div class="intro" </div>
+	<h1>{{ article.title }}</h1>
+	<h4>Posted by <span class="fn">{{ article.author_name }}</span> on <span class="published">{{ article.date }}</span></h4>
+</div>
 
-<h1>{{ article.title }}</h1>
 <section class="content">
 	<article>
-	<address class="vcard author">
-
-	<span class="clip">
-	<img class="photo" alt="profile picture of {{ article.author_name }}" src="{{ article.author_gravatar }}?s=72" width="72" height="72">
-	</span>
-	<span class="fn">{{ article.author_name }}</span>
-
-	</address>
-
 	<h2>{{ article.subtitle }}</h2>
 
 	<section role="main">

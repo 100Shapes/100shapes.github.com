@@ -1,13 +1,23 @@
 @import "vars";
 
 .article {
-	h1 {
-		padding-top: @ws-unit*20;
-		padding-bottom: @ws-unit*20;
-	}
-	address.author {
-		text-align: center;
+	
+	.intro {
+		.makeContainer;
+		padding-top: @ws-unit*6.25;
 
+		h1 {
+			color: @header-color-pink;
+		}
+		
+		h4 {
+			text-transform: uppercase;
+			color: @light-grey-color;
+			font-size: 10px;
+		}
+	}
+
+	address.author {
 		.clip {
 			.rounded(@ws-unit*3);
 			display: inline-block;

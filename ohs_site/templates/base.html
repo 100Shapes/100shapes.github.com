@@ -9,8 +9,6 @@
         <title>{% block pageTitle %}{% endblock %} | 100Shapes</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
-
         <meta name="description" content="{% block description %}{% endblock %}">
         
         <meta name="author" content="{% block author %}{{ AUTHOR }}{% endblock %}">
@@ -20,7 +18,7 @@
         {% block extraHead %}
         {% endblock extraHead %}
         
-        <script src="{{ MEDIAURL }}/js/vendor/modernizr-2.6.1.min.js"></script>
+        <script src="{{ STATIC_URL }}js/vendor/modernizr-2.6.1.min.js"></script>
         <link rel="shortcut icon" href="favicon.ico" />
   </head>
     <body class="{% block pageClass %}{% endblock pageClass %}">

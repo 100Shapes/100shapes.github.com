@@ -9,13 +9,14 @@ import os
 BUILD_DIR = settings.BUILD_DIR
 
 def setup():
-	local('cp ohs_site/offline/local_settings.py ohs_site/', capture=False)
+	local('cp ohs_site/offline/secret_settings.py ohs_site/')
+	local('nano ohs_site/secret_settings.py')
 
 def build_site():
     local("python manage.py build")
 
 def build_static():
-	pass
+	print "Not implemented"
 
 def build_blog():
 	blog = settings.STATICBLOG_COMPILE_DIRECTORY
@@ -29,5 +30,7 @@ def build():
 	build_static()
 
 def deploy():
+	os.environ['PRODUCTION'] = '1'
 	build()
+	del os.environ['PRODUCTION']
 	abort("Deploying isn't set up yet. Fix me.")

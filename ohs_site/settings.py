@@ -4,6 +4,8 @@ import os
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+PRODUCTION = bool(os.environ.get('PRODUCTION', ''))
+
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 ADMINS = (
@@ -77,12 +79,20 @@ STATIC_ROOT = os.path.join(SITE_ROOT, '.sitestatic')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = 'http://media.100shapes.com/'
+
+if PRODUCTION:    
+    STATIC_URL = 'http://media.100shapes.com/'
+    STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+else:
+    STATIC_URL = '/static/'
+    
+
 
 # Additional locations of static files
 STATICFILES_DIRS = (
     os.path.join(SITE_ROOT, 'static'),
 )
+
 
 # List of finder classes that know how to find static files in
 # various locations.
@@ -136,6 +146,7 @@ INSTALLED_APPS = (
     # Libs
     'bakery',
     'staticblog',
+    'storages',
     
     # Apps
     'ohs_site.home',
@@ -173,7 +184,6 @@ LOGGING = {
 }
 
 try:
-    from ohs_site.local_settings import *
-except ImportError:
+    from ohs_site.secret_settings import *
+except:
     pass
-

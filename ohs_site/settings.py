@@ -120,6 +120,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 
     'ohs_site.home',
+    'bakery',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -150,3 +151,10 @@ LOGGING = {
         },
     }
 }
+
+# BAKING: http://datadesk.latimes.com/posts/2012/03/introducing-django-bakery/
+BUILD_DIR = os.path.join(SITE_ROOT, 'build')
+
+BAKERY_VIEWS = [
+    'ohs_site.home.views.HomeView',
+]

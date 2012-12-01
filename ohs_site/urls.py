@@ -10,6 +10,8 @@ urlpatterns = patterns('',
     # Home
     url(r'^$', HomeView.as_view(), name='home'),
 
+    url(r'^blog/', include('ohs_site.blog.urls'))
+
     # url(r'^ohs_site/', include('ohs_site.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

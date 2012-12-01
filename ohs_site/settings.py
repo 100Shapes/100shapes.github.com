@@ -63,6 +63,12 @@ BAKERY_VIEWS = [
     'ohs_site.home.views.HomeView',
 ]
 
+# BLOG: https://github.com/cgrice/django-staticblog
+STATICBLOG_ROOT = SITE_ROOT
+
+STATICBLOG_POST_DIRECTORY = os.path.join(SITE_ROOT, 'blog', 'posts', '')
+STATICBLOG_COMPILE_DIRECTORY = os.path.join(BUILD_DIR, 'blog', '')
+
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
@@ -127,8 +133,14 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 
-    'ohs_site.home',
+    # Libs
     'bakery',
+    'staticblog',
+    
+    # Apps
+    'ohs_site.home',
+    'ohs_site.blog',
+    
 )
 
 # A sample logging configuration. The only tangible logging

@@ -77,7 +77,7 @@ STATIC_ROOT = os.path.join(SITE_ROOT, '.sitestatic')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static/'
+STATIC_URL = 'http://media.100shapes.com/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -171,4 +171,9 @@ LOGGING = {
         },
     }
 }
+
+try:
+    from ohs_site.local_settings import *
+except ImportError:
+    pass
 

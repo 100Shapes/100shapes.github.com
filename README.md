@@ -16,12 +16,14 @@ Clone the repo to where you normally keep code:
 
 	cd ~/Projects/
 	git clone git@github.com:100Shapes/100shapes.com.git
-
-Set the project root:
-
 	cd 100shapes.com/
 	setvirtualenvproject
 
 Install the requirements:
 
-	pip install -r requirements.txt 
+	pip install -r requirements.txt
+
+Run setup:
+
+	fab setup
+

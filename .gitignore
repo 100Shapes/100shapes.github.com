@@ -5,3 +5,4 @@
 ohs_site/build/
 ohs_site/.sitestatic/
 ohs_site/blog/posts
+ohs_site/local_settings.py

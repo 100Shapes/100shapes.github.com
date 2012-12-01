@@ -4,7 +4,7 @@ from fabric.contrib import django
 django.project('ohs_site')
 from django.conf import settings
 
-import os, shutil
+import os
 
 BUILD_DIR = settings.BUILD_DIR
 BUILT_STATIC_DIR = os.path.join(BUILD_DIR, 'static')
@@ -17,7 +17,9 @@ def build_site():
     local("python manage.py build")
 
 def build_static():
-	print "Not implemented"
+	if not os.path.exists(BUILD_DIR):
+	    os.makedirs(BUILD_DIR)
+	local('cp ohs_site/extras/* %s' % BUILD_DIR)
 
 def build_blog():
 	blog = settings.STATICBLOG_COMPILE_DIRECTORY
@@ -33,7 +35,7 @@ def build():
 def deploy():
 	os.environ['PRODUCTION'] = '1'
 	build()
-	shutil.rmtree(BUILT_STATIC_DIR)
+	local('rm -rf %s' % BUILT_STATIC_DIR)
 	local('ghp-import %s' % BUILD_DIR)
 	del os.environ['PRODUCTION']
 	abort("Deploying isn't set up yet. Fix me.")

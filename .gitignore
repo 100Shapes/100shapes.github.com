@@ -2,3 +2,4 @@
 *.DS_Store
 *.MacOSX
 *.Trash
+ohs_site/build/

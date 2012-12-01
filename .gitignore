@@ -3,3 +3,4 @@
 *.MacOSX
 *.Trash
 ohs_site/build/
+ohs_site/static/

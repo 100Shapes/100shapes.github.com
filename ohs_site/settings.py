@@ -55,11 +55,19 @@ MEDIA_ROOT = ''
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
 MEDIA_URL = ''
 
+
+# BAKING: http://datadesk.latimes.com/posts/2012/03/introducing-django-bakery/
+BUILD_DIR = os.path.join(SITE_ROOT, 'build')
+
+BAKERY_VIEWS = [
+    'ohs_site.home.views.HomeView',
+]
+
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = os.path.join(SITE_ROOT, 'static')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -67,7 +75,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    os.path.join(SITE_ROOT, 'static'),
+    os.path.join(SITE_ROOT, 'globals'),
 )
 
 # List of finder classes that know how to find static files in
@@ -152,9 +160,3 @@ LOGGING = {
     }
 }
 
-# BAKING: http://datadesk.latimes.com/posts/2012/03/introducing-django-bakery/
-BUILD_DIR = os.path.join(SITE_ROOT, 'build')
-
-BAKERY_VIEWS = [
-    'ohs_site.home.views.HomeView',
-]

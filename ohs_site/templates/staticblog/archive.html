@@ -1,4 +1,9 @@
-{% for post in posts %}
+{% extends "base.html" %}
+
+{% block content %}
+	{% for post in posts %}
 <h2><a href="/posts/{{post.name}}/">{{post.title}}</a></h2> 
 <p class="meta">{{post.date}}</p>
 {% endfor %}
+	
+{% endblock content %}

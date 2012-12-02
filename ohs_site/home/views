@@ -1,2 +1,0 @@
-from bakery.views import BuildableTemplateView
-

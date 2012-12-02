@@ -7,16 +7,19 @@ from django.conf import settings
 import os
 
 BUILD_DIR = settings.BUILD_DIR
-BUILT_STATIC_DIR = os.path.join(BUILD_DIR, 'static')
 
 def setup():
 	local('cp ohs_site/offline/secret_settings.py ohs_site/')
 	local('nano ohs_site/secret_settings.py')
 
-def build_site():
-    local("python manage.py build")
+def build_site(assets=True):
+	if not assets:
+	    local("python manage.py build")
+	else:
+	    local("python manage.py build --skip-media --skip-static")
+	
 
-def build_static():
+def build_extras():
 	if not os.path.exists(BUILD_DIR):
 	    os.makedirs(BUILD_DIR)
 	local('cp ohs_site/extras/* %s' % BUILD_DIR)
@@ -27,15 +30,14 @@ def build_blog():
 	    os.makedirs(blog)
 	local("python manage.py update_blog")
 
-def build():
-	build_site()
+def build(assets):
+	build_site(assets)
 	build_blog()
-	build_static()
+	build_extras()
 
 def deploy():
 	os.environ['PRODUCTION'] = '1'
-	build()
-	local('rm -rf %s' % BUILT_STATIC_DIR)
+	build(False)
 	local('ghp-import %s' % BUILD_DIR, capture=True)
 	del os.environ['PRODUCTION']
 	

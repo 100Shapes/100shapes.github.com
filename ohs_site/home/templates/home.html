@@ -7,7 +7,7 @@
 {% block content %}
 <div class="intro">
 	<div class="container">
-		<img src="{{ SITEURL }}/theme/img/100shapes.png"></img>
+		<img src="{{ STATIC_URL }}img/100shapes.png"></img>
 	</div>
 	<p>We turn good ideas into great products</p>
 	<a class="button-primary" href="#">Tell me more</a>
@@ -45,8 +45,8 @@
 
 {% block scripts %}
 	{% include "jquery.html" %}
-	<script src="{{ SITE_URL }}/theme/js/index/jquery.scrollto.js"></script>
-	<script src="{{ SITE_URL }}/theme/js/index/main.js"></script>
+	<script src="{{ STATIC_URL }}js/vendor/jquery.scrollto.js"></script>
+	<script src="{{ STATIC_URL }}js/home.js"></script>
 	
 {% endblock %}
 

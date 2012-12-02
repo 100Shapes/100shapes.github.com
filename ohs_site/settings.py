@@ -1,10 +1,11 @@
 import os
 # Django settings for ohs_site project.
 
-DEBUG = bool(os.environ.get('PRODUCTION', ''))
+PRODUCTION = bool(os.environ.get('PRODUCTION', '')) 
+DEBUG = not PRODUCTION
 TEMPLATE_DEBUG = DEBUG
 
-PRODUCTION = DEBUG
+PRODUCTION = not DEBUG
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
@@ -75,7 +76,7 @@ STATICBLOG_COMPILE_DIRECTORY = os.path.join(BUILD_DIR, 'blog', '')
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(SITE_ROOT, '.sitestatic')
+STATIC_ROOT = os.path.join(SITE_ROOT, '.sitestatic/')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -87,6 +88,7 @@ if PRODUCTION:
     AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
     STATIC_URL = 'http://media.100shapes.com/'
     STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 else:
     STATIC_URL = '/static/'
@@ -193,8 +195,3 @@ LOGGING = {
         },
     }
 }
-
-try:
-    from ohs_site.secret_settings import *
-except:
-    pass

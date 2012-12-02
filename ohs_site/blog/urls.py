@@ -1,6 +1,5 @@
 from django.conf.urls import patterns, include, url
 
-
 urlpatterns = patterns('staticblog.views',
 
     url(r'^$', 'archive', name="blog"),

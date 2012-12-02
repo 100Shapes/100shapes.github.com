@@ -17,8 +17,7 @@ def build_site(include_assets=True):
 	 	local("python manage.py build")
 	else:
 		local("python manage.py build --skip-media --skip-static")
-	
-		
+			
 def build_extras():
 	if not os.path.exists(BUILD_DIR):
 		os.makedirs(BUILD_DIR)
@@ -38,6 +37,8 @@ def build(include_assets=True):
 def deploy():
 	os.environ['PRODUCTION'] = '1'
 	build(False)
+	local('python manage.py collectstatic')
+	local('python manage.py assets build')
 	local('ghp-import -p %s' % BUILD_DIR, capture=True)
 	del os.environ['PRODUCTION']
 	

@@ -1,10 +1,10 @@
 import os
 # Django settings for ohs_site project.
 
-DEBUG = True
+DEBUG = bool(os.environ.get('PRODUCTION', ''))
 TEMPLATE_DEBUG = DEBUG
 
-PRODUCTION = bool(os.environ.get('PRODUCTION', ''))
+PRODUCTION = DEBUG
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
@@ -99,8 +99,13 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'django_assets.finders.AssetsFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
+
+ASSETS_MODULES = [
+    'ohs_site.assets'
+]
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'o67#5v$(o8(gy!r2(hf+o!(t6oa-8y_zj6(oxg!=*@vk=&amp;^3_8'
@@ -147,6 +152,7 @@ INSTALLED_APPS = (
     'bakery',
     'staticblog',
     'storages',
+    'django_assets',
     
     # Apps
     'ohs_site.home',

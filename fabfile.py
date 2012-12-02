@@ -13,7 +13,8 @@ def setup():
 	local('nano ohs_site/.env')
 
 def build_site():
-	if env.environment == 'production':
+	e = getattr(env, 'environment', None) 
+	if e == 'production':
 		local("foreman run python manage.py build --skip-media --skip-static")
 	else:
 		local("python manage.py build")
@@ -30,7 +31,8 @@ def build_blog():
 	if not os.path.exists(blog):
 		os.makedirs(blog)
 
-	if env.environment == 'production':
+	e = getattr(env, 'environment', None) 
+	if e == 'production':
 		local("foreman run python manage.py update_blog")
 	else:
 		local("python manage.py update_blog")

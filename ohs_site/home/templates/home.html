@@ -43,14 +43,14 @@
 	</div>
 </div>
 
-{% block scripts %}
-	{% include "jquery.html" %}
-	<script src="{{ STATIC_URL }}js/vendor/jquery.scrollto.js"></script>
-	<script src="{{ STATIC_URL }}js/home.js"></script>
-	
-{% endblock %}
-
 {% endblock content %}
+
+{% block scripts %}
+	{% load assets %}
+	{% assets "js_base", "js_home" %}
+	    <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+	{% endassets %}
+{% endblock %}
 
 {% block pageTitle %}
 	100Shapes

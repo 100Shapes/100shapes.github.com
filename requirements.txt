@@ -9,4 +9,6 @@ html2text==3.200.3
 paramiko==1.9.0
 pycrypto==2.6
 wsgiref==0.1.2
-git+git://github.com/100Shapes/ghp-import.git
+git+git://github.com/100Shapes/ghp-import.git#egg=ghp-import
+django-assets==0.8
+webassets==0.8

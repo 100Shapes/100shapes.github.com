@@ -2,6 +2,7 @@
 *.DS_Store
 *.MacOSX
 *.Trash
+.env
 ohs_site/build/
 ohs_site/.sitestatic/
 ohs_site/blog/posts

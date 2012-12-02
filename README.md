@@ -23,7 +23,7 @@ Install the requirements:
 
 	pip install -r requirements.txt
 
-Run setup:
+Run setup and add your [S3 details](https://sites.google.com/a/onehundredshapes.com/info/credentials):
 
 	fab setup
 
@@ -31,7 +31,7 @@ Run setup:
 Deploying
 ---------
 
-Make sure you've copied `secret_settings.py` and filled them in. Then run:
+Make sure you've copied `.env` with your Amazon S3 details, run:
 
 	fab deploy
 

@@ -45,9 +45,9 @@ def build():
 
 
 def deploy():
+	local('python manage.py collectstatic --noinput')
 	env.environment = 'production'
 	build()
 	local('foreman run python manage.py collectstatic --noinput')
-	local('foreman run python manage.py assets build')
 	local('ghp-import -p %s' % BUILD_DIR, capture=True)
 	env.environment = None

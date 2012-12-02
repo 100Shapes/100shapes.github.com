@@ -11,6 +11,7 @@ BUILD_DIR = settings.BUILD_DIR
 def setup():
 	local('cp ohs_site/offline/sample.env ohs_site/.env')
 	local('nano ohs_site/.env')
+	
 
 def build_site():
 	e = getattr(env, 'environment', None) 
@@ -33,7 +34,7 @@ def build_blog():
 
 	e = getattr(env, 'environment', None) 
 	if e == 'production':
-		local("foreman run python manage.py update_blog")
+		local("foreman run python manage.py update_blog --all")
 	else:
 		local("python manage.py update_blog")
 

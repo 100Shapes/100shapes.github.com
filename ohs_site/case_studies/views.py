@@ -4,4 +4,7 @@ from django.core.urlresolvers import reverse
 class MooView(BuildableTemplateView):
 
 	template_name = "moo.html"
-	build_path = '/case-studies/moo/index.html'#'/'.join(reverse('moo'), "index.html",)
+	
+	@property
+	def build_path(cls):
+		return '/'.join((reverse('moo')[1:], "index.html",))

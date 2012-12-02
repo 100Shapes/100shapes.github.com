@@ -27,6 +27,10 @@ Run setup and add your [S3 details](https://sites.google.com/a/onehundredshapes.
 
 	fab setup
 
+Link to the 100shapes posts:
+
+	ln -s path/to/drive/Site/posts/ ohs_site/blog/
+
 
 Deploying
 ---------

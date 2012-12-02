@@ -27,3 +27,11 @@ Run setup:
 
 	fab setup
 
+
+Deploying
+---------
+
+Make sure you've copied `secret_settings.py` and filled them in. Then run:
+
+	fab deploy
+

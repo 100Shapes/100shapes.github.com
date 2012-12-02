@@ -3,6 +3,7 @@
 *.MacOSX
 *.Trash
 .env
+ohs_site/static/css/*.css
 ohs_site/build/
 ohs_site/.sitestatic/
 ohs_site/blog/posts

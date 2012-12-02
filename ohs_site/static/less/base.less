@@ -1,0 +1,203 @@
+@import "vars";
+@font-face {
+    font-family: 'Miso';
+    src: url('../typography/miso/bold.eot');
+    src: url('../typography/miso/bold.eot?#iefix') format('embedded-opentype'),
+         url('../typography/miso/bold.woff') format('woff'),
+         url('../typography/miso/bold.ttf') format('truetype'),
+         url('../typography/miso/bold.svg#MisoBold') format('svg');
+    font-weight: @bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Miso';
+    src: url('../typography/miso/regular.eot');
+    src: url('../typography/miso/regular.eot?#iefix') format('embedded-opentype'),
+         url('../typography/miso/regular.woff') format('woff'),
+         url('../typography/miso/regular.ttf') format('truetype'),
+         url('../typography/miso/regular.svg#MisoRegular') format('svg');
+    font-weight: @regular;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Miso';
+    src: url('../typography/miso/light.eot');
+    src: url('../typography/miso/light.eot?#iefix') format('embedded-opentype'),
+         url('../typography/miso/light.woff') format('woff'),
+         url('../typography/miso/light.ttf') format('truetype'),
+         url('../typography/miso/light.svg#MisoLight') format('svg');
+    font-weight: @light;
+    font-style: normal;
+}
+a {
+	font-weight: 600; 
+	color: @link-color-base;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+body {
+	background-color: @background-color-light;
+	margin: 0;
+	font-family: @font-family-copy;
+	font-weight: 400;
+	color: @body-copy-color;
+	line-height: 1.5;
+}
+
+.container, .content {
+	.makeContainer;
+}
+
+nav {
+	.clearfix;
+	background-color: @background-color-light;
+	border-bottom-width: 1px;
+	border-bottom-color: @nav-border-color;
+	border-bottom-style: solid;
+		
+
+	a {
+		color:@header-color-pink;
+		font-family: @font-family-headings;
+		font-weight: @regular;
+		font-size: 22px;
+		letter-spacing: 1px;
+
+		&:hover {
+			opacity: 0.8;
+			text-decoration: none;
+		}
+	}
+
+	ol {
+		.makeContainer;
+		padding:@ws-unit 0;
+	}
+
+	li {
+		list-style-type: none;
+		float: left;
+		display: inline;
+		margin-right: @ws-unit*2;
+	
+		&:first-child {
+			margin-left: @ws-unit/2;
+		}
+		
+		&:last-child {
+			float: right;
+			margin-right: @ws-unit/2;
+		}
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: @font-family-headings;
+	color: @header-color-dark;
+	margin: 0;
+	font-weight: @regular;
+	font-size: @ws-unit * 1.5;
+}
+
+h1 {
+	color: @header-color-light;
+	font-size: @ws-unit * 2.4;
+	line-height: @ws-unit * 2.5;
+	font-weight: @regular;
+}
+
+h2 {
+	font-size: @ws-unit * 2.4;
+	line-height: @ws-unit * 2.5;
+	color: @header-color-pink;
+}
+
+
+header {
+	background-color: @header-background-color;
+}
+footer {
+	margin: @ws-unit*8 0 @ws-unit*6;
+	text-align: center;
+}
+
+.article-list {
+
+	text-align: center;
+
+	article {
+		width: @ws-unit*26px;
+	}
+
+	ol {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		display: inline-block;
+		margin: 0 @ws-unit*1.5;
+		padding: 0;
+		list-style-type: none;
+		vertical-align: top;
+	}
+	
+ 	h3 {
+		color: @link-color-base;
+		font-family: @font-family-copy;
+		font-size: @ws-unit;
+		font-weight: 600;
+		margin-top: @ws-unit*3;
+	}
+}
+.share-tools {
+
+	.column(12);
+
+	ol {
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style: none;
+		display: inline-block;
+		margin:0 @ws-unit;
+	}
+	h2 {
+		.visuallyhidden();
+	}
+	a {
+		.rounded(@ws-unit*8);
+		background-image: url('../img/social_sprite.png');
+		background-repeat: no-repeat;
+		display: block;
+		height: 48px;
+		width: 42px;
+		&:hover {
+			.box-shadow(inset 0px 0px 5px rgba(0,0,0,0.5));
+			}
+	}
+	span {
+		display: none;
+	}
+
+	
+	.share-fb {
+		background-position: -3px 0px;
+		background-color: #5b78a6;
+	}
+	.share-tw {
+		background-position: -54px 0px;
+		background-color: #77cced;
+	}
+	.share-pt {
+		background-position: -104px 0px;
+		background-color: #bf4751;
+	}
+}
+

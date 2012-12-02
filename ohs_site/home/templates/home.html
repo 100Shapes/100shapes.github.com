@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load assets %}
 
 
 {% block pageDescription %}100Shapes{% endblock %}
@@ -49,11 +49,16 @@
 {% endblock content %}
 
 {% block scripts %}
-	{% load assets %}
 	{% assets "js_base", "js_home" %}
-	    <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+	<script type="text/javascript" src="{{ ASSET_URL }}"></script>
 	{% endassets %}
 {% endblock %}
+
+{% block styles %}
+	{% assets "css_base", "css_home" %}
+	<link rel="stylesheet" href="{{ ASSET_URL }}">
+	{% endassets %}
+{% endblock styles %}
 
 {% block pageTitle %}
 	100Shapes
@@ -61,4 +66,4 @@
 
 {% block pageHeading %}100Shapes{% endblock pageHeading %}
 
-{% block pageClass %}index{% endblock pageClass %}
+{% block pageClass %}home{% endblock pageClass %}

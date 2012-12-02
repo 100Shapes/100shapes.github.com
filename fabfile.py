@@ -36,6 +36,6 @@ def deploy():
 	os.environ['PRODUCTION'] = '1'
 	build()
 	local('rm -rf %s' % BUILT_STATIC_DIR)
-	local('ghp-import %s' % BUILD_DIR)
+	local('ghp-import %s' % BUILD_DIR, capture=True)
 	del os.environ['PRODUCTION']
-	abort("Deploying isn't set up yet. Fix me.")
+	

@@ -1,10 +1,10 @@
 import os
 # Django settings for ohs_site project.
 
-DEBUG = True
+DEBUG = bool(os.environ.get('PRODUCTION', ''))
 TEMPLATE_DEBUG = DEBUG
 
-PRODUCTION = bool(os.environ.get('PRODUCTION', ''))
+PRODUCTION = DEBUG
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 

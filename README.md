@@ -15,7 +15,7 @@ Make a virtual directory for the project:
 Clone the repo to where you normally keep code:
 
 	cd ~/Projects/
-	git clone git@github.com:100Shapes/100shapes.com.git
+	git clone git@github.com:100Shapes/100shapes.com.git 100shapes.com
 	cd 100shapes.com/
 	setvirtualenvproject
 

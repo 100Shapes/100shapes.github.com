@@ -80,9 +80,14 @@ STATIC_ROOT = os.path.join(SITE_ROOT, '.sitestatic')
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 
-if PRODUCTION:    
+if PRODUCTION:
+
+    AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+    AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+    AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
     STATIC_URL = 'http://media.100shapes.com/'
     STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
 else:
     STATIC_URL = '/static/'
     

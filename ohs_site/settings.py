@@ -166,6 +166,7 @@ INSTALLED_APPS = (
     'ohs_site.home',
     'ohs_site.blog',
     'ohs_site.case_studies',
+    'ohs_site.about',
     
 )
 

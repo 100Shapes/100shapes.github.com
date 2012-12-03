@@ -8,6 +8,7 @@ $nav_about = $('.nav-about')
 $nav_work = $('.nav-work')
 $nav_contact = $('.nav-contact')
 $nav_logo = $('.nav-logo')
+$nav_logo_pink = $('.nav-logo.pink')
 
 $about = $('.about')
 $work = $('.work')
@@ -49,11 +50,11 @@ $window.scroll ->
 	if pageYOffset > nav_flip
 		$nav.css({'background-color': light, 'border-bottom-style' : 'solid'})
 		$nav_links.css('color', pink)
-		$nav_logo.css('background-image', "url('../theme/img/logo_small_pink.png')")
+		$nav_logo.addClass('pink')
 	else
 		$nav.css({'background-color': 'transparent', 'border-bottom-style' : 'none'})
 		$nav_links.css('color', "#fff")
-		$nav_logo.css('background-image', "url('../theme/img/logo_small_white.png')")
+		$nav_logo.removeClass('pink')
 return
 
 

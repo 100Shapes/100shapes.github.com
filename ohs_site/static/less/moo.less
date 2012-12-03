@@ -1,6 +1,6 @@
 @import "vars";
 
-.tweevie {
+.moo {
 	header {
 		background-image: url("../img/header-promo.jpg");
 	}
@@ -49,10 +49,10 @@
 	section {
 		.column(8);
 		margin-bottom: @ws-unit*5;
+	}
 
-		&.right {
-			text-align: right;
-			.push(4);
-		}
+	.content section:nth-child(2n) {
+		text-align: right;
+		.push(4);
 	}
 }

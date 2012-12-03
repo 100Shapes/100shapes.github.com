@@ -8,44 +8,54 @@
 
 {% include "includes/global_nav.html" %}
 
-<div class="intro">
+<section class="intro">
 	<div class="container">
-		<img src="{{ STATIC_URL }}img/100shapes.png"></img>
+		<div class="content-panel">
+			<img src="{{ STATIC_URL }}img/100shapes.png"></img>
+			<p>We turn good ideas into great products</p>
+			<a class="primary-btn white" href="#">Tell me more</a>
+		</div>
 	</div>
-	<p>We turn good ideas into great products</p>
-	<a class="primary-btn white" href="#">Tell me more</a>
-</div>
+</section>
 
-<div class="about">
+<section class="about">
 	<div class="container">
-		<h2>Shaping a new world</h2>
-		<p>100 Shapes is a small, passionate team of designers and developers that helps startups and established companies plan, design and build digital products. To us, good considered design is the key to success, so we focus on execution and the important little details. We work closely with our clients to create brilliant websites, services and online products. Design is not just what it looks like. Design is how it works.</p>
-		<h4>Have a look for yourself</h4><a class="primary-btn" href="#">See our work</a>
+		<div class="content-panel">
+			<h2>Shaping a new world</h2>
+			<p>100 Shapes is a small, passionate team of designers and developers that helps startups and established companies plan, design and build digital products. To us, good considered design is the key to success, so we focus on execution and the important little details. We work closely with our clients to create brilliant websites, services and online products. Design is not just what it looks like. Design is how it works.</p>
+			<h4>Have a look for yourself</h4>
+			<a class="primary-btn" href="#">See our work</a>
+		</div>
 	</div>
-</div>
+</section>
 
-<div class="work">
+<section class="work">
 	<div class="moo">
-		<h2>Testing Moo.com</h2>
-		<p>We carried out in depth usability testing for MOO’s brand new Quick &amp; Easy tool. Working closely with the MOO design team we crafted, organised one on one indepth interviews with potential customers and helped the Moo team figure out what was working and what needed a little tweaking.</p>
-		<a class="primary-btn" href="{% url moo %}">Read more</a>
-	</div>
-</div>
+		<div class="container">
+			<div class="content-panel">
+				<h2>Testing Moo.com</h2>
+				<p>We carried out in depth usability testing for MOO’s brand new Quick &amp; Easy tool. Working closely with the MOO design team we crafted, organised one on one indepth interviews with potential customers and helped the Moo team figure out what was working and what needed a little tweaking.</p>
+				<a class="primary-btn" href="{% url moo %}">Read more</a>
+			</div>
+		</div>
+	</div>	
+</section>
 
-<div class="contact">
+<section class="contact">
 	<div class="container">
-		<h2>How about a chat</h2>
-		<div class="text">
-			<p>To really get a sense of what 100 Shapes are all about and what we could do for you, why not come in and see us? Or, we could come to you. To arrange a time, email</p>
-			<a href="mailto:hi@100shapes.com" title="hi@100shapes.com" class="email">hi@100shapes.com</a>
-		</div>
-		<div class="buttons">
-			<a href="http://www.facebook.com/100shapes" class="primary-btn facebook"><span>/100shapes</span></a>
-			<a href="https://twitter.com/100shapes" class="primary-btn twitter"><span>@100shapes</span></a>
+		<div class="content-panel">
+			<h2>How about a chat</h2>
+			<div class="text">
+				<p>To really get a sense of what 100 Shapes are all about and what we could do for you, why not come in and see us? Or, we could come to you. To arrange a time, email</p>
+				<a href="mailto:hi@100shapes.com" title="hi@100shapes.com" class="email">hi@100shapes.com</a>
+			</div>
+			<div class="buttons">
+				<a href="http://www.facebook.com/100shapes" class="primary-btn facebook"><span>/100shapes</span></a>
+				<a href="https://twitter.com/100shapes" class="primary-btn twitter"><span>@100shapes</span></a>
+			</div>
 		</div>
 	</div>
-</div>
-
+</section>
 {% endblock content %}
 
 {% block scripts %}

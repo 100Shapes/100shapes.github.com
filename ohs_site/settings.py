@@ -90,6 +90,13 @@ if PRODUCTION:
     STATIC_URL = 'http://media.100shapes.com/'
     STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+    
+    from datetime import date, timedelta
+    tenyrs = date.today() + timedelta(days=365*10)
+    # Expires 10 years in the future at 8PM GMT
+    AWS_HEADERS = {
+        'Expires': tenyrs.strftime('%a, %d %b %Y 20:00:00 GMT')
+    }
 
 else:
     STATIC_URL = '/static/'

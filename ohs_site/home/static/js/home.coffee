@@ -18,7 +18,7 @@ $intro_btn = $('.intro a')
 $about_btn = $('.about a')
 
 scroll_duration = 800
-nav_flip = 777
+nav_flip = 640
 pink = '#C47382'
 light = '#eee'
 

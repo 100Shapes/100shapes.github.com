@@ -8,4 +8,4 @@ class AboutView(BuildableTemplateView):
 	
 	@property
 	def build_path(cls):
-		return '/'.join((reverse('about')[1:], "about.html",))
+		return '/'.join((reverse('about')[1:], "index.html",))

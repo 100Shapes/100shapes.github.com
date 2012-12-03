@@ -114,6 +114,11 @@ nav {
 	}
 }
 
+section .with-note span {
+	position: static;
+	display: block
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: @font-family-headings;
 	color: @header-color-dark;
@@ -140,8 +145,13 @@ header {
 	background-color: @header-background-color;
 }
 footer {
-	margin: @ws-unit*8 0 @ws-unit*6;
+	margin: @ws-unit*4 0;
 	text-align: center;
+
+	.email {
+		float: right;
+		font-family: @font-family-headings;
+	}
 }
 
 .article-list {

@@ -10,7 +10,7 @@
 		<div class="container">
 			<div class="content-panel">
 				<div class="with-note">
-					<span class="note">Worth a read</span>
+					<span>Worth a read</span>
 					<h1>About us</h1>
 				</div>
 				<p>We are a young digital design agency with a passion for creating products of the highest possible quality. We design. We build. We deliver. But that’s not all...</p>
@@ -27,22 +27,22 @@
 		</section>
 
 		<div class="columns">
-			<section class="">
+			<section>
 				<h3>Get it in front of users</h3>
 				<p>The sooner the better. We get our products and ideas in front of users as soon as we can. Insights, from real people help us refine and improve our work and ensure they stand the test of time.</p>
 			</section>
 
-			<section class="">
+			<section>
 				<h3>Fast and efficent</h3>
 				<p>We focus on the product by only documenting when we need to. We work in wireframes and prototypes as there’s no better test for integrity than playing with the real thing- however basic.</p>
 			</section>
 
-			<section class="">
+			<section>
 				<h3>Keep it super simple</h3>
 				<p>Life is hectic enough. We obsess over the little things to make our products super clean and super clear. User experience is everything.</p>
 			</section>
 
-			<section class="">
+			<section>
 				<h3>Homemade</h3>
 				<p>We believe that true innovation comes from nurturing your creative side, so when we’re not making products with our clients we’re creating and launching our own. Check out Tweevie.</p>
 			</section>
@@ -56,9 +56,10 @@
 			</div>
 		</div>
 	</div>
+
+{% include "includes/footer.html" %}
+
 {% endblock content %}
-
-
 {% block styles %}
 	{% assets "css_base", "css_about" %}
 	<link rel="stylesheet" href="{{ ASSET_URL }}">

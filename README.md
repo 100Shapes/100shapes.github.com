@@ -31,6 +31,14 @@ Link to the 100shapes posts:
 
 	ln -s path/to/drive/Site/posts/ ohs_site/blog/
 
+Building the Static site
+------------------------
+
+Run:
+
+	fab build
+
+and everything will be made in ohs_site/build/.
 
 Deploying
 ---------

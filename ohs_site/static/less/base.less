@@ -95,6 +95,25 @@ nav {
 	}
 }
 
+
+.with-note {
+	position: relative;
+
+	span {
+		font-family: @font-family-headings;
+		font-weight: @bold;
+		font-size: @ws-unit*0.7;
+		position: absolute;
+		top: -@ws-unit;
+	}
+
+	&.orange {
+		span {
+			color: @tag-color-orange;
+		}
+	}
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: @font-family-headings;
 	color: @header-color-dark;

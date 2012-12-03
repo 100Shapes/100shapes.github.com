@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block pageTitle %}Tweevie{%endblock%}
+
+{% block content %}
+	{% include "includes/global_nav.html" %}
+	<header>
+		<div class="container">
+			<div class="content-panel">
+				<div class="with-note orange">
+					<span>OMG</span>
+					<h1>Tweevie</h1>
+				</div>
+				<p>Enjoy the best of twitter whilst watching TV. We’ve long enjoyed the hilarity that reading twitter comments can induce whilst watching BBC Newsnight or the poignancy it can bring to an X Factor final. Tweevie is what happens when your television and twitter get steamy under the sheets. Here’s how we did it...</p>
+			</div>
+		</div>
+	</header>
+	<div class="content">
+
+		<section>
+			<h2>Smart Gestures</h2>
+			<p>Tweetbot has gestures that can save you time. 1) Tap a Link or Avatar in your timeline to view more. 2) Tapping and holding any of those elements gives you options. 3) And finally you can configure triple-tap to reply-to, fave, retweet, or even translate a tweet.</p>
+		</section>
+		
+		<section>
+			<h2>Smart Gestures</h2>
+			<p>Tweetbot has gestures that can save you time. 1) Tap a Link or Avatar in your timeline to view more. 2) Tapping and holding any of those elements gives you options. 3) And finally you can configure triple-tap to reply-to, fave, retweet, or even translate a tweet.</p>
+		</section>
+		
+		<section>
+			<h2>Smart Gestures</h2>
+			<p>Tweetbot has gestures that can save you time. 1) Tap a Link or Avatar in your timeline to view more. 2) Tapping and holding any of those elements gives you options. 3) And finally you can configure triple-tap to reply-to, fave, retweet, or even translate a tweet.</p>
+		</section>
+		
+		<section>
+			<h2>Smart Gestures</h2>
+			<p>Tweetbot has gestures that can save you time. 1) Tap a Link or Avatar in your timeline to view more. 2) Tapping and holding any of those elements gives you options. 3) And finally you can configure triple-tap to reply-to, fave, retweet, or even translate a tweet.</p>
+		</section>
+		
+	</div>
+	<div class="promo-box">
+		<div class="container">
+			<div class="with-note orange">
+				<span>GO ON!</span>
+				<h2>Enjoy another side to TV with <span class="tweevie-logo">tweevie</span></h2>
+			</div>
+			
+		</div>
+	</div>
+
+	{# {% include "includes/footer.html" %} #}
+	
+{% endblock %}
+
+{% block styles %}
+	{% load assets %}
+	{% assets "css_base", "css_tweevie" %}
+	<link rel="stylesheet" href="{{ ASSET_URL }}">
+	{% endassets %}
+{% endblock styles %}
+
+{% block pageClass %}product tweevie{% endblock %}

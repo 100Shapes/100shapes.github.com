@@ -1,16 +1,13 @@
 <nav>
 	<ol>
 		<li>
-			<a class="nav-about" href="#about" title="100shapes Services">about us</a>
+			<a class="nav-about" href="{% url home %}#about" title="100shapes Services">about us</a>
 		</li>
 		<li>
-			<a class="nav-work" href="#work" title="100shapes Work">work</a>
+			<a class="nav-work" href="{% url home %}#work" title="100shapes Work">work</a>
 		</li>
 		<li>
-			<a class="nav-contact" href="#contact" title="100shapes Contact">get in touch</a>
-		</li>
-		<li>
-			<a href="{% url blog %}" title="100shapes Blog">blog</a>
+			<a class="nav-contact" href="{% url home %}#contact" title="100shapes Contact">get in touch</a>
 		</li>
 		<li class="nav-logo">
 			<a href="{% url home %}" title="100shapes home"><span>100shapes</span></a>

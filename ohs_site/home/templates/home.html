@@ -8,20 +8,20 @@
 
 {% include "includes/global_nav.html" %}
 
-<section class="intro">
+<section class="intro" id="intro">
 	<div class="container">
 		<div class="content-panel">
-			<img id="intro" src="{{ STATIC_URL }}img/100shapes.png"></img>
+			<img src="{{ STATIC_URL }}img/100shapes.png"></img>
 			<p>We turn good ideas into great products</p>
 			<a class="primary-btn white" href="#">Tell me more</a>
 		</div>
 	</div>
 </section>
 
-<section class="about">
+<section class="about" id="about">
 	<div class="container">
 		<div class="content-panel">
-			<h2 id="about">It starts with a good idea...</h2>
+			<h2>It starts with a good idea...</h2>
 			<p>...and becomes a mobile app, a website, a tablet or all three and more. We at 100 Shapes use our expertise to craft digital experiences that are simple and a joy to use.</p>
 			<a class="button-primary" href="#">See our work</a>
 		</div>
@@ -29,10 +29,10 @@
 </section>
 
 <section class="work">
-	<div class="moo">
+	<div class="moo" id="work">
 		<div class="container">
 			<div class="content-panel">
-				<h2 id="work">Testing Moo.com</h2>
+				<h2>Testing Moo.com</h2>
 				<p>We carried out in depth usability testing for MOO’s brand new Quick &amp; Easy tool. Working closely with the MOO design team we crafted, organised one on one indepth interviews with potential customers and helped the Moo team figure out what was working and what needed a little tweaking.</p>
 				<a class="primary-btn" href="{% url moo %}">Read more</a>
 			</div>

@@ -3,42 +3,46 @@
 {% block pageTitle %}User Testing{%endblock%}
 
 {% block content %}
-	<div class="promo-box">
+	<header>
 		<div class="container">
 			<div class="content-panel">
 				<h1>User Testing</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 			</div>
 		</div>
-		<img src="">
-	</div>
+	</header>
 	<div class="content">
-		<div class="content">
-			<section>
-				<h2>Understanding diverse needs</h2>
-				<p>In the early stages we ran ethnographic audience research that enabled the team to understand how peoples were consuming TV and Radio, and where the needs and opportunities were. Since then, we have run regular natural usability research and concept tests, to provide the BBC with real insight into how people are using the service and what they want from it.</p>
-			</section>
+		<section>
+			<h2>Understanding diverse needs</h2>
+			<p>In the early stages we ran ethnographic audience research that enabled the team to understand how peoples were consuming TV and Radio, and where the needs and opportunities were. Since then, we have run regular natural usability research and concept tests, to provide the BBC with real insight into how people are using the service and what they want from it.</p>
+		</section>
 
-			<section class="right">
-				<h2>Rapid, Lively feedback</h2>
-				<p>For each study, our findings have been quickly delivered to the core design and marketing teams, using a combination of detailed usability reporting and video-based audience insights. This has enabled the iPlayer team to resolve difficult design challenges and prioritise features and functions.</p>
-			</section>
+		<section class="right">
+			<h2>Rapid, Lively feedback</h2>
+			<p>For each study, our findings have been quickly delivered to the core design and marketing teams, using a combination of detailed usability reporting and video-based audience insights. This has enabled the iPlayer team to resolve difficult design challenges and prioritise features and functions.</p>
+		</section>
 
-			<section>
-				<h2>Outcomes</h2>
-				<p>In just a few months after launch, BBC iPlayer became Europe’s leading VOD over IP service and its dominance is still growing. We continue to work with the iPlayer team, helping them to shape the future delivery of BBC programmes.</p>
-			</section>
-		</div>
-
-		<div class="promo-box">
-			<div class="container">
-				<div class="content-panel">
-					<h2>Try it yourself</h2>
-					<p>Usability testing with real users will identify usability problems and highlight ways to improve the user experience. It plays an essential role in our user centred design approach. If you’re looking for a tailor made usability tester, please get in touch.</p>
-				</div>
+		<section>
+			<h2>Outcomes</h2>
+			<p>In just a few months after launch, BBC iPlayer became Europe’s leading VOD over IP service and its dominance is still growing. We continue to work with the iPlayer team, helping them to shape the future delivery of BBC programmes.</p>
+		</section>
+	</div>
+	<div class="promo-box">
+		<div class="container">
+			<div class="content-panel">
+				<h2>Try it yourself</h2>
+				<p>Usability testing with real users will identify usability problems and highlight ways to improve the user experience. It plays an essential role in our user centred design approach. If you’re looking for a tailor made usability tester, please get in touch.</p>
 			</div>
 		</div>
 	</div>
+	
 {% endblock %}
+
+{% block styles %}
+	{% load assets %}
+	{% assets "css_base", "css_moo" %}
+	<link rel="stylesheet" href="{{ ASSET_URL }}">
+	{% endassets %}
+{% endblock styles %}
 
 {% block pageClass %}case-study moo{% endblock %}

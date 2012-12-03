@@ -153,8 +153,14 @@ footer {
 	font-size: 22px;
 	font-weight: @light;
 
+	.footer-logo {
+		.column(2);
+		.push(5);
+	}
+
 	.email {
-		float: right;
+		.column(5);
+		text-align: right;
 		font-family: @font-family-headings;
 	}
 }

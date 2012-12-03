@@ -31,6 +31,9 @@
 
         {% block scripts %}{% endblock %}
 
+        {% if not debug %}
+            {% include "includes/google_analytics.html" %}
+        {% endif %}
     </body>
 </html>
  

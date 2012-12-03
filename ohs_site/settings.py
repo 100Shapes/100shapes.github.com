@@ -5,8 +5,6 @@ PRODUCTION = bool(os.environ.get('PRODUCTION', ''))
 DEBUG = not PRODUCTION
 TEMPLATE_DEBUG = DEBUG
 
-PRODUCTION = not DEBUG
-
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 ADMINS = (
@@ -169,6 +167,10 @@ INSTALLED_APPS = (
     'ohs_site.about',
     'ohs_site.products',
     
+)
+
+INTERNAL_IPS = (
+    '127.0.0.1',
 )
 
 # A sample logging configuration. The only tangible logging

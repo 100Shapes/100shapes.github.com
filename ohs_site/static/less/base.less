@@ -104,13 +104,14 @@ nav {
 		font-weight: @bold;
 		font-size: @ws-unit*0.7;
 		position: absolute;
-		left: -@ws-unit/2;
 		top: -@ws-unit;
 	}
-}
 
-header .with-note span {
-	color: @tag-color-orange;
+	&.orange {
+		span {
+			color: @tag-color-orange;
+		}
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {

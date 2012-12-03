@@ -63,6 +63,8 @@ BUILD_DIR = os.path.join(SITE_ROOT, 'build')
 BAKERY_VIEWS = [
     'ohs_site.home.views.HomeView',
     'ohs_site.case_studies.views.MooView',
+    'ohs_site.about.views.AboutView',
+    'ohs_site.products.views.TweevieView',
 ]
 
 # BLOG: https://github.com/cgrice/django-staticblog

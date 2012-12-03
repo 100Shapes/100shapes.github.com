@@ -54,3 +54,23 @@
     -o-background-size: cover;
     background-size: cover;
 }
+
+.primary-btn-style() {
+    .rounded(3px);
+    color: #fff;
+    display: inline-block;
+    margin-top: -6px;
+    background-color: @header-color-pink;
+    font-family: @font-family-headings;
+    font-size: 24px;
+    font-weight: @light;
+    border: none;
+    padding: 6px 9px;
+    text-decoration: none;
+
+    &:hover{
+        background-color: @background-color-highlight;
+        text-decoration: none;
+    }
+
+}

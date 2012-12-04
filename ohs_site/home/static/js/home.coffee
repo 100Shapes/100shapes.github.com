@@ -23,10 +23,10 @@ pink = '#C47382'
 light = '#eee'
 
 $(document).ready ->
-	$('.carousel').carousel({interval: 2000})
+	$('.carousel').carousel({interval: 5000})
  	$('#about').on 'activate', (evnt) ->
 		console.log('hello')
-		
+
 $intro_btn.click (e) =>
 	e.preventDefault()
 	$about.ScrollTo({duration: scroll_duration})

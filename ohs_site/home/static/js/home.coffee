@@ -24,8 +24,7 @@ light = '#eee'
 
 $(document).ready ->
 	$('.carousel').carousel({interval: 5000})
- 	$('#about').on 'activate', (evnt) ->
-		console.log('hello')
+	$nav_logo.addClass('white')
 
 $intro_btn.click (e) =>
 	e.preventDefault()
@@ -55,11 +54,11 @@ $window.scroll ->
 	if pageYOffset > nav_flip
 		$nav.css({'background-color': light, 'border-bottom-style' : 'solid'})
 		$nav_links.css('color', pink)
-		$nav_logo.addClass('pink')
+		$nav_logo.removeClass('white')
 	else
 		$nav.css({'background-color': 'transparent', 'border-bottom-style' : 'none'})
 		$nav_links.css('color', "#fff")
-		$nav_logo.removeClass('pink')
+		$nav_logo.addClass('white')
 
 
 #		background-color: transparent;

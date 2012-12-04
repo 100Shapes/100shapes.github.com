@@ -8,20 +8,20 @@
 
 {% include "includes/global_nav.html" %}
 
-<section class="intro" id="intro">
+<section class="intro">
 	<div class="container">
 		<div class="content-panel">
-			<img src="{{ STATIC_URL }}img/100shapes.png"></img>
+			<img id="intro" src="{{ STATIC_URL }}img/100shapes.png"></img>
 			<p>We turn good ideas into great products.</p>
 			<a class="primary-btn white" href="#">Tell me more</a>
 		</div>
 	</div>
 </section>
 
-<section class="about" id="about" data-spy="scroll">
+<section class="about">
 	<div class="container">
 		<div class="content-panel">
-			<h2>It starts with a good idea...</h2>
+			<h2 id="about">It starts with a good idea...</h2>
 			<p>...and becomes a mobile app, a website, a tablet or all three and more. We at 100Shapes use our expertise to craft digital experiences that are simple and a joy to use.</p>
 			<a class="primary-btn" href="#">See our work</a>
 		</div>
@@ -92,6 +92,8 @@
 	<link rel="stylesheet" href="{{ ASSET_URL }}">
 	{% endassets %}
 {% endblock styles %}
+
+{% block bodyAttributes %}data-spy="scroll" data-target="nav"{% endblock bodyAttributes %}
 
 {% block fullTitle %}100Shapes | design and build apps{% endblock fullTitle %}
 

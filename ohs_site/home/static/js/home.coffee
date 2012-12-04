@@ -1,6 +1,6 @@
 
 $window = $(window)
-
+$sections = $('section')
 $nav = $('nav')
 $nav_links = $('nav a')
 
@@ -59,17 +59,4 @@ $window.scroll ->
 		$nav.css({'background-color': 'transparent', 'border-bottom-style' : 'none'})
 		$nav_links.css('color', "#fff")
 		$nav_logo.addClass('white')
-
-
-#		background-color: transparent;
-
-#		a {
-#			color: #fff;
-#
-#		}
-
-	# $background.css('top', "#{pageYOffset}px")
-	# $('nav').css('top', "#{pageYOffset}px")
-
-
 

@@ -1,0 +1,15 @@
+{
+	"folders":
+	[
+		{
+			"path": "./",
+			"folder_exclude_patterns": [
+				"ohs_site/.sitestatic",
+				"ohs_site/build"
+			],
+			"file_exclude_patterns": [
+				"*.css"
+			]
+		}
+	]
+}

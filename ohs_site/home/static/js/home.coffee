@@ -22,6 +22,9 @@ nav_flip = 640
 pink = '#C47382'
 light = '#eee'
 
+$(document).ready ->
+  $('.carousel').carousel({interval: 2000})
+
 $intro_btn.click (e) =>
 	e.preventDefault()
 	$about.ScrollTo({duration: scroll_duration})
@@ -55,7 +58,6 @@ $window.scroll ->
 		$nav.css({'background-color': 'transparent', 'border-bottom-style' : 'none'})
 		$nav_links.css('color', "#fff")
 		$nav_logo.removeClass('pink')
-return
 
 
 

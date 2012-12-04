@@ -13,7 +13,7 @@
 		<div class="content-panel">
 			<img id="intro" src="{{ STATIC_URL }}img/100shapes.png"></img>
 			<p>We turn good ideas into great products.</p>
-			<a class="primary-btn white" href="#">Tell me more</a>
+			<a class="primary-btn white path-btn" href="#about">Tell me more</a>
 		</div>
 	</div>
 </section>
@@ -23,7 +23,7 @@
 		<div class="content-panel">
 			<h2 id="about">It starts with a good idea...</h2>
 			<p>...and becomes a mobile app, a website, a tablet or all three and more. We at 100Shapes use our expertise to craft digital experiences that are simple and a joy to use.</p>
-			<a class="primary-btn" href="#">See our work</a>
+			<a class="primary-btn path-btn" href="#work">See our work</a>
 		</div>
 	</div>
 </section>
@@ -92,8 +92,6 @@
 	<link rel="stylesheet" href="{{ ASSET_URL }}">
 	{% endassets %}
 {% endblock styles %}
-
-{% block bodyAttributes %}data-spy="scroll" data-target="nav"{% endblock bodyAttributes %}
 
 {% block fullTitle %}100Shapes | design and build apps{% endblock fullTitle %}
 

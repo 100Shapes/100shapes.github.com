@@ -96,9 +96,12 @@ nav {
 		}
 	}
 
-	&.white {
-		.logo {
-			background-position: 0px -0px;
+	&.transparent {
+		.nav-logo .logo {
+			visibility: hidden;
+		}
+		.nav-logo .tagline {
+			visibility: visible;
 		}
 	}
 }
@@ -119,8 +122,6 @@ nav {
 		margin-left: 100px;
 		visibility: hidden;
 	}
-
-
 }
 
 .with-note {

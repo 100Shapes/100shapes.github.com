@@ -176,7 +176,7 @@
 		.carousel-control {
 			.opacity(0.5);
 			position: absolute;
-			top: 40%;
+			top: 50%;
 			left: 15px;
 			width: 40px;
 			height: 40px;
@@ -198,24 +198,34 @@
 				text-decoration: none;
 			}
 		}
-	}
-
-	.moo {
-		.cover;
-		background-image: url('../img/moo.jpg');
-		padding: @ws-unit*10 0;
 		
 		h2 {
 			color: #fff;
+			margin-top: 0;
 		}
 
 		p {
 			color: #fff;
 		}
-	
+
 		.content-panel {
 			.column(4);
 		}
+
+		.about-us {
+			.cover();
+			background-image: url("../img/header-about.jpg");
+			padding: @ws-unit*10 0;
+			
+		}
+
+		.moo {
+			.cover;
+			background-image: url('../img/moo.jpg');
+			padding: @ws-unit*10 0;
+			
+		}
+
 	}
 
 	.contact {

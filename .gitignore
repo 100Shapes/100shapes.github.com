@@ -9,3 +9,4 @@ ohs_site/.sitestatic/
 ohs_site/blog/posts
 ohs_site/local_settings.py
 ohs_site/secret_settings.py
+*.sublime-workspace

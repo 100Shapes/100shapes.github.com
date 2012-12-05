@@ -5,7 +5,7 @@
 
 {% include "includes/global_nav.html" %}
 
-<div class="intro" </div>
+<div class="intro">
 	<h1>{{ post.title }}</h1>
 	<h4>Posted by <span class="fn">{{ post.author }}</span> on <span class="published">{{ post.date|date:"jS F Y" }}</span></h4>
 </div>
@@ -35,6 +35,9 @@
 	{% assets "css_base", "css_blog" %}
 	<link rel="stylesheet" href="{{ ASSET_URL }}">
 	{% endassets %}
+	{% if post.meta.stylesheet %}
+	<link rel="stylesheet" href="{{ STATIC_URL }}/blog/{{ post.meta.slug }}/{{ post.meta.stylesheet }}">
+	{% endif %}
 {% endblock styles %}
 
 {% block author %}{{ post.author_name }}{% endblock author %}

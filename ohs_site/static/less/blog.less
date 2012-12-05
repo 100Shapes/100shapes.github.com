@@ -5,9 +5,9 @@
 	
 	.intro {
 		.makeContainer();
-		padding-top: @ws-unit*5;
 		width: 620px;
-
+		padding-top: @ws-unit*5;
+		
 		h1 {
 			color: @header-color-pink;
 		}
@@ -43,7 +43,8 @@
 
 	.intro {
 		.makeContainer();
-		margin-top: @ws-unit*3;
+		width: 620px;
+		padding-top: @ws-unit*5;
 
 		h1{
 			color: @header-color-pink;
@@ -52,12 +53,23 @@
 
 	.posts {
 		.makeContainer();
+		width: 620px;
 		margin-top: @ws-unit*3;
 		padding: @ws-unit;
 
-		h2 {
+		a {
 			font-weight: @light;
+			color: @header-color-dark;
 		}
+
+		h4 {
+			text-transform: uppercase;
+			color: #999;
+			font-size: 12px;
+			letter-spacing: 0px;
+			margin-top: 5px;
+		}
+
 		img {
 			margin-right:@ws-unit; 
 			display: block;

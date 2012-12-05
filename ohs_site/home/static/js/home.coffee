@@ -1,3 +1,28 @@
+class Header
+
+	transparentClassName: 'transparent',
+
+	constructor: (@$el, @threshold) ->
+		@$body = $ 'body'
+		window.onscroll = @.refresh
+		@.refresh()
+
+	refresh: =>
+		scrollPosition = Math.max @$body.scrollTop(), 0
+		if scrollPosition < @threshold
+			if not @isTransparent()
+				@$el.addClass @transparentClassName
+		else
+			if @isTransparent()
+				@$el.removeClass @transparentClassName
+
+	isTransparent: =>
+		@$el.hasClass @transparentClassName
+
+nav = $('nav')
+header = new Header nav, 800
+
+
 # $window = $(window)
 # $sections = $('section')
 # $nav = $('nav')

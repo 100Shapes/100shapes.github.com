@@ -95,15 +95,6 @@ nav {
 			margin-left: @ws-unit/2;
 		}
 	}
-
-	&.transparent {
-		.nav-logo .logo {
-			visibility: hidden;
-		}
-		.nav-logo .tagline {
-			visibility: visible;
-		}
-	}
 }
 
 .nav-logo {
@@ -120,7 +111,12 @@ nav {
 
 	.tagline {
 		margin-left: 100px;
-		visibility: hidden;
+		color: @body-copy-color;
+		font-family: @font-family-headings;
+		font-weight: @regular;
+		font-size: 22px;
+		letter-spacing: 1px;
+
 	}
 }
 

@@ -1,10 +1,33 @@
 {% extends "base.html" %}
 
-{% block content %}
-	{% for post in posts %}
-<h2><a href="{% url blog %}{{post.name}}/">{{post.title}}</a></h2> 
-<p class="meta">{{post.date}}</p>
+{% load assets %}
 
-{% endfor %}
+{% block content %}
+
+{% include "includes/global_nav.html" %}
+
+<section class="intro">
+	<h1>100 Shapes blog posts</h2>
+</section>
+
+<section class="posts">
+	{% for post in posts %}
+		<img src="{{ post.thumbnail_url }}"></img>
+		<h2><a href="{% url blog %}{{post.name}}/">{{post.title}}</a></h2>
+		<h4>Posted by <span class="fn">{{ post.author }}</span> on <span class="published">{{ post.date|date:"jS F Y" }}</span></h4>
+	{% endfor %}
+</section>
 	
 {% endblock content %}
+
+{% block styles %}
+	{% assets "css_base", "css_blog" %}
+	<link rel="stylesheet" href="{{ ASSET_URL }}">
+	{% endassets %}
+{% endblock styles %}
+
+{% block pageTitle %}Blog{% endblock pageTitle %}
+
+{% block description %}Blog Archive{% endblock description %}
+
+{% block pageClass %}blog blog-archive{% endblock pageClass %}

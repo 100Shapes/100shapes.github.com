@@ -1,10 +1,48 @@
 {% extends "base.html" %}
+{% load assets %}
 
 {% block content %}
-	<h1>{{post.title}}</h1>
-<h3 class="summary">{{post.summary}}</h3>
-<p class="meta">By <em>{{post.author}}</em> on <em>{{post.date}}</em></p>
 
-{{post.content|safe}}
+{% include "includes/global_nav.html" %}
+
+<div class="intro">
+	<h1>{{ post.title }}</h1>
+	<h4>Posted by <span class="fn">{{ post.author }}</span> on <span class="published">{{ post.date|date:"jS F Y" }}</span></h4>
+</div>
+
+<section class="content">
+	<article>
+	<h2>{{ post.subtitle }}</h2>
+
+	<section role="main">
+	{{ post.content|safe}}
+	</section>
+
+	<footer role="complementary">
 	
-{% endblock content %}
+	</footer>
+	</article>
+
+</section>
+
+{% endblock %}
+
+{% block pageTitle %}
+	{{ post.title }}
+{% endblock pageTitle %}
+
+{% block styles %}
+	{% assets "css_base", "css_blog" %}
+	<link rel="stylesheet" href="{{ ASSET_URL }}">
+	{% endassets %}
+	{% if post.meta.stylesheet %}
+	<link rel="stylesheet" href="{{ STATIC_URL }}/blog/{{ post.meta.slug }}/{{ post.meta.stylesheet }}">
+	{% endif %}
+{% endblock styles %}
+
+{% block author %}{{ post.author_name }}{% endblock author %}
+
+{% block description %}{{ post.description }}{% endblock description %}
+
+{% block pageClass %}blog blog-post{% endblock pageClass %}
+

@@ -41,42 +41,36 @@
 
 .blog-archive{
 
-	.intro {
-		.makeContainer();
-		width: 620px;
-		padding-top: @ws-unit*5;
-
-		h1{
-			color: @header-color-pink;
-		}
-	}
-
 	.posts {
 		.makeContainer();
-		width: 620px;
 		margin-top: @ws-unit*3;
-		padding: @ws-unit;
+		
+		.post {
+			.column(3);
+			height: @ws-unit*15;
+			
+			a {
+				text-decoration: none;	
+			}
+			
+			p {
+				height: @ws-unit*3.5;
+				margin: @ws-unit 0 0 0;
+				font-weight: @regular;
+			}
 
-		a {
-			font-weight: @light;
-			color: @header-color-dark;
-		}
+			h4 {
+				text-transform: uppercase;
+				color: #999;
+				font-size: 12px;
+				letter-spacing: 0px;
+			}
 
-		h4 {
-			text-transform: uppercase;
-			color: #999;
-			font-size: 12px;
-			letter-spacing: 0px;
-			margin-top: 5px;
-		}
-
-		img {
-			margin-right:@ws-unit; 
-			display: block;
-			border: 1px solid red;
-			width: 100px;
-			height: 100px;
-			float: left;
+			img {
+				border: 1px solid red;
+				width: @ws-unit*11;
+				height: @ws-unit*7.5;
+			}
 		}
 	}
 

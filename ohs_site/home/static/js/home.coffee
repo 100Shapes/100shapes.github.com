@@ -19,8 +19,8 @@ class Header
 	isTransparent: =>
 		@$el.hasClass @transparentClassName
 
-nav = $('nav')
-header = new Header nav, 800
+banner = $('.banner')
+header = new Header banner, 800
 
 
 # $window = $(window)

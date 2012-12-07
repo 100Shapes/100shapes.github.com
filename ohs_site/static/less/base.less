@@ -54,15 +54,19 @@ body {
 	.makeContainer;
 }
 
-nav {
-	.clearfix;
+.banner {
 	background-color: @background-color-light;
 	border-bottom-width: 1px;
 	border-bottom-color: @nav-border-color;
 	border-bottom-style: solid;
+}
+
+nav {
+	.makeContainer();
+	.clearfix;
 
 	a {
-		color:@header-color-pink;
+		color: @header-color-pink;
 		font-family: @font-family-headings;
 		font-weight: @regular;
 		font-size: 22px;
@@ -75,29 +79,23 @@ nav {
 	}
 
 	ol {
-		.makeContainer;
+		.column(12);
 		padding:@ws-unit 0;
 	}
 
 	li {
 		list-style-type: none;
-		float: left;
-		display: inline;
-		margin-right: @ws-unit*2;
 		float: right;
-	
-		&:first-child {
-				float: left;		
-		}
+		text-align: right;
+		margin-left: @ws-unit;
 		
-		&:last-child {
-	
-			margin-left: @ws-unit/2;
-		}
 	}
 }
 
 .nav-logo {
+	margin: 0;
+	text-align: left;
+	float: left;
 	
 	.logo {
 		width: 90px;

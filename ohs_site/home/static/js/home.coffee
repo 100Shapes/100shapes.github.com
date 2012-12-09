@@ -22,6 +22,12 @@ class Header
 banner = $('.banner')
 header = new Header banner, 800
 
+$body = $('body')
+$('a.jump-btn').click (evnt) ->
+	evnt.preventDefault()
+	$body.animate (scrollTop: $(this.hash).offset().top), 500
+	false
+
 
 # $window = $(window)
 # $sections = $('section')

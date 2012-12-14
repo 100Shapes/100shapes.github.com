@@ -28,15 +28,16 @@ def build_extras():
 
 
 def build_blog():
-	blog = settings.STATICBLOG_COMPILE_DIRECTORY
-	if not os.path.exists(blog):
-		os.makedirs(blog)
+	pass
+	# blog = settings.STATICBLOG_COMPILE_DIRECTORY
+	# if not os.path.exists(blog):
+	# 	os.makedirs(blog)
 
-	e = getattr(env, 'environment', None) 
-	if e == 'production':
-		local("foreman run python manage.py update_blog --all")
-	else:
-		local("python manage.py update_blog")
+	# e = getattr(env, 'environment', None) 
+	# if e == 'production':
+	# 	local("foreman run python manage.py update_blog --all")
+	# else:
+	# 	local("python manage.py update_blog")
 
 
 def build():

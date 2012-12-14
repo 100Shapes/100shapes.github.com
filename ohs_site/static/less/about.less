@@ -65,22 +65,47 @@
 	}
 
 	.promo-box {
-		text-align: right;
+		background-image: url("../img/footer-about.jpg");
+		padding: @ws-unit*4 0;
+		
+		.content-panel {		
+			.column(3);
+			.push(8);
+			text-align: right;
+
 			h2{
 				color: white;
 			}
-		background-image: url("../img/footer-about.jpg");
-
-		.content-panel {
-			margin-top: @ws-unit*4;
-			.push(8);
-
+		
 			img {
 				min-height: 0;
 				min-width: 0;
 				position: static;
 				top: 0;
-		}
+			}
 		}	
+	}
+	@media (min-width: 768px) and (max-width: 979px) {
+
+	}
+
+	// Responsive: Landscape phone to desktop/tablet
+	@media (max-width: 767px) {
+
+	}
+
+	// UP TO LANDSCAPE PHONE
+	// ---------------------
+	@media (max-width: 480px) {
+	header.content-panel {
+			.column(6);
+			.push(3);
+			margin-top: @ws-unit*15 0;
+		}
+
+		section {
+		.column(8);
+		margin-bottom: @ws-unit*7;
+	}
 	}
 }

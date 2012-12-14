@@ -66,16 +66,14 @@
 
 <section class="contact">
 	<div class="container">
-		<div class="content-panel">
-			<h2 id="contact">How about a chat?</h2>
-			<div class="text">
-				<p>Get a sense of what 100Shapes are about and what we could do for you. Why not come in and see us? To arrange a time, email:</p>
-				<a href="mailto:hi@100shapes.com" title="hi@100shapes.com" class="email">hi@100shapes.com</a>
-			</div>
-			<div class="buttons">
-				<a href="http://www.facebook.com/100shapes" class="primary-btn facebook" onClick="_gaq.push(['_trackEvent', 'Social', 'profile-viewed', 'Facebook']);"><span>/100shapes</span></a>
-				<a href="https://twitter.com/100shapes" class="primary-btn twitter" onClick="_gaq.push(['_trackEvent', 'Social', 'profile-viewed', 'Twitter']);"><span>@100shapes</span></a>
-			</div>
+		<h2 id="contact">How about a chat?</h2>
+		<div class="text">
+			<p>Get a sense of what 100Shapes are about and what we could do for you. Why not come in and see us? To arrange a time, email:</p>
+			<a href="mailto:hi@100shapes.com" title="hi@100shapes.com" class="email">hi@100shapes.com</a>
+		</div>
+		<div class="buttons">
+			<a href="http://www.facebook.com/100shapes" class="primary-btn facebook" onClick="_gaq.push(['_trackEvent', 'Social', 'profile-viewed', 'Facebook']);"><span>/100shapes</span></a>
+			<a href="https://twitter.com/100shapes" class="primary-btn twitter" onClick="_gaq.push(['_trackEvent', 'Social', 'profile-viewed', 'Twitter']);"><span>@100shapes</span></a>
 		</div>
 	</div>
 </section>
@@ -88,7 +86,7 @@
 {% endblock %}
 
 {% block styles %}
-	{% assets "css_base", "css_home" %}
+	{% assets "css_base", "css_home", "css_responsive" %}
 	<link rel="stylesheet" href="{{ ASSET_URL }}">
 	{% endassets %}
 {% endblock styles %}

@@ -4,7 +4,11 @@ class Header
 
 	constructor: (@$el, @threshold) ->
 		@$body = $ 'body'
-		window.onscroll = @.refresh
+		if @$body.width() > 800
+			window.onscroll = @.refresh
+		else
+			if @isTransparent()
+				return @$el.removeClass @transparentClassName
 		@.refresh()
 
 	refresh: =>

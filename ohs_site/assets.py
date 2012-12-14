@@ -9,5 +9,10 @@ styles_base = Bundle(
 	'css/base.css',
 	output='gen/base.css')
 
+styles_responsive = Bundle(
+	'css/responsive.css',
+	output='gen/responsive.css')
+
 register('js_base', js_base)
 register('css_base', styles_base)
+register('css_responsive', styles_responsive)

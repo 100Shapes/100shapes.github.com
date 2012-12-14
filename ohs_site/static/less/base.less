@@ -51,7 +51,7 @@ body {
 }
 
 .container, .content {
-	.makeContainer;
+	.makeContainer();
 }
 
 .banner {
@@ -266,6 +266,63 @@ footer {
 	.share-pt {
 		background-position: -104px 0px;
 		background-color: #bf4751;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+}
+
+@media (max-width: 767px) {
+	.nav {
+		padding:10px 0;
+
+		.nav-logo {
+			margin-left: 0;
+
+			.logo {
+				top: 10px;
+			}
+		}
+		
+		.tagline {
+			margin-left: 95px;
+			letter-spacing: -1px;
+		}
+
+		a {
+			letter-spacing: -1px;
+		}
+
+		li {
+
+			margin-left: @ws-unit/2;
+		}
+	}
+}
+
+
+@media (max-width: 480px) {
+
+	.nav {
+		padding:5px 0;
+
+		.tagline {
+			display: none;
+		}
+
+		.nav-logo .logo {
+			top:5px;
+		}
+	
+
+		a {
+			letter-spacing: -1px;
+		}
+
+		li {
+
+			margin-left: @ws-unit/2;
+		}
 	}
 }
 

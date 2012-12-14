@@ -17,9 +17,11 @@
 
         
 	
-	<link rel="stylesheet" href="http://media.100shapes.com/gen/base.css?b3cfb994">
+	<link rel="stylesheet" href="http://media.100shapes.com/gen/base.css?0bdf31c6">
 	
-	<link rel="stylesheet" href="http://media.100shapes.com/gen/home.css?85a00db7">
+	<link rel="stylesheet" href="http://media.100shapes.com/gen/home.css?28d60096">
+	
+	<link rel="stylesheet" href="http://media.100shapes.com/gen/responsive.css?ec0977e9">
 	
 
         
@@ -33,68 +35,93 @@
 
         
 
-<nav>
-	<ol>
-		<li class="nav-logo">
-			<a href="/" title="100shapes home"><span>100shapes</span></a>
-		</li>
-		<li>
-			<a class="nav-contact" href="/#contact" title="100shapes Contact">get in touch</a>
-		</li>
-		<li>
-			<a class="nav-work" href="/#work" title="100shapes Work">work</a>
-		</li>
-		<li>
-			<a href="/about/" title="100shapes Services">about us</a>
-		</li>
-	</ol>
-</nav>
+<div class="banner transparent">
+	<nav>
+		<ol class="nav">
+			<li class="nav-logo">
+				<a href="/"><span class="logo"></span></a>
+				<span class="tagline">we are a creative digital studio</span>
+			</li>
+			<li>
+				<a href="/#contact" title="100shapes Contact">get in touch</a>
+			</li>
+			<li>
+				<a href="/#work" title="100shapes Work">work</a>
+			</li>
+			<li>
+				<a href="/about/" title="100shapes Services">about us</a>
+			</li>
+		</ol>
+	</nav>
+</div>
 
 
-<section class="intro" id="intro">
+<section class="intro">
 	<div class="container">
 		<div class="content-panel">
-			<img src="http://media.100shapes.com/img/100shapes.png"></img>
+			<img id="intro" src="http://media.100shapes.com/img/100shapes.png"></img>
 			<p>We turn good ideas into great products.</p>
-			<a class="primary-btn white" href="#">Tell me more</a>
+			<a class="primary-btn white jump-btn" href="#about">Tell me more</a>
 		</div>
 	</div>
 </section>
 
-<section class="about" id="about">
+<section class="about">
 	<div class="container">
 		<div class="content-panel">
-			<h2>It starts with a good idea...</h2>
+			<h2 id="about">It starts with a good idea...</h2>
 			<p>...and becomes a mobile app, a website, a tablet or all three and more. We at 100Shapes use our expertise to craft digital experiences that are simple and a joy to use.</p>
-			<a class="primary-btn" href="#">See our work</a>
+			<a class="primary-btn jump-btn" href="#work">See our work</a>
 		</div>
 	</div>
 </section>
 
-<section class="work">
-	<div class="moo" id="work">
-		<div class="container">
-			<div class="content-panel">
-				<h2>Testing Moo.com</h2>
-				<p>We carried out in-depth usability testing for MOO’s brand new Quick &amp; Easy tool. Working closely with the MOO design team, we crafted, organised one-on-one, in-depth interviews with potential customers and helped the MOO team figure out what was working and what needed a little tweaking.</p>
-				<a class="primary-btn" href="/case-studies/moo/">Read more</a>
+<section class="work" id="work">
+<div id="ohsCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">
+    	<div class="moo">
+			<div class="container">
+				<div class="content-panel">
+					<h2>Testing Moo.com</h2>
+					<p>We carried out in-depth usability testing for MOO’s brand new Quick &amp; Easy tool. Working closely with the MOO design team, we crafted, organised one-on-one, in-depth interviews with potential customers and helped the MOO team figure out what was working and what needed a little tweaking.</p>
+					<a class="primary-btn" href="/case-studies/moo/">Read more</a>
+				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
+    <div class="item">
+    	<div class="about-us">
+			<div class="container">
+				<div class="content-panel">
+					<div class="with-note orange">
+						<span>WORTH A READ</span>
+						<h2>About us</h2>
+					</div>
+					<p>We are a young digital design agency with a passion for creating products of the highest possible quality. We design. We build. We deliver. But that’s not all...</p>
+					<a class="primary-btn" href="/about/">Find out what</a>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#ohsCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#ohsCarousel" data-slide="next">&rsaquo;</a>
+</div>	
 </section>
 
 <section class="contact">
 	<div class="container">
-		<div class="content-panel">
-			<h2 id="contact">How about a chat?</h2>
-			<div class="text">
-				<p>Get a sense of what 100Shapes are about and what we could do for you. Why not come in and see us? To arrange a time, email:</p>
-				<a href="mailto:hi@100shapes.com" title="hi@100shapes.com" class="email">hi@100shapes.com</a>
-			</div>
-			<div class="buttons">
-				<a href="http://www.facebook.com/100shapes" class="primary-btn facebook" onClick="_gaq.push(['_trackEvent', 'Social', 'profile-viewed', 'Facebook']);"><span>/100shapes</span></a>
-				<a href="https://twitter.com/100shapes" class="primary-btn twitter" onClick="_gaq.push(['_trackEvent', 'Social', 'profile-viewed', 'Twitter']);"><span>@100shapes</span></a>
-			</div>
+		<h2 id="contact">How about a chat?</h2>
+		<div class="text">
+			<p>Get a sense of what 100Shapes are about and what we could do for you. Why not come in and see us? To arrange a time, email:</p>
+			<a href="mailto:hi@100shapes.com" title="hi@100shapes.com" class="email">hi@100shapes.com</a>
+		</div>
+		<div class="buttons">
+			<a href="http://www.facebook.com/100shapes" class="primary-btn facebook" onClick="_gaq.push(['_trackEvent', 'Social', 'profile-viewed', 'Facebook']);"><span>/100shapes</span></a>
+			<a href="https://twitter.com/100shapes" class="primary-btn twitter" onClick="_gaq.push(['_trackEvent', 'Social', 'profile-viewed', 'Twitter']);"><span>@100shapes</span></a>
 		</div>
 	</div>
 </section>
@@ -105,7 +132,7 @@
 	
 	<script type="text/javascript" src="http://media.100shapes.com/gen/base.js?cfa9051c"></script>
 	
-	<script type="text/javascript" src="http://media.100shapes.com/gen/home.js?102ea190"></script>
+	<script type="text/javascript" src="http://media.100shapes.com/gen/home.js?0d88a56d"></script>
 	
 
 

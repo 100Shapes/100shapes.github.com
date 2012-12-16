@@ -32,6 +32,8 @@ $('a.jump-btn').click (evnt) ->
 	$body.animate (scrollTop: $(this.hash).offset().top), 500
 	false
 
+$('.carousel').carousel({interval: 5000})
+
 
 # $window = $(window)
 # $sections = $('section')
@@ -56,9 +58,6 @@ $('a.jump-btn').click (evnt) ->
 # pink = '#C47382'
 # light = '#eee'
 
-# $(document).ready ->
-# 	$('.carousel').carousel({interval: 5000})
-# 	$nav_logo.addClass('white')
 
 # $intro_btn.click (e) =>
 # 	e.preventDefault()

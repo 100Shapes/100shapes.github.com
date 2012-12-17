@@ -7,7 +7,6 @@ js_base = Bundle(
 styles_base = Bundle(
 	'css/reset.css',
 	'css/base.css',
-	'css/responsive.css',
 	output='gen/base.%(version)s.css')
 
 register('js_base', js_base)

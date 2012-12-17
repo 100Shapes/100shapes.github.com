@@ -330,4 +330,162 @@
 			}
 		}
 	}
+	@media (min-width: 768px) and (max-width: 979px) {
+
+
+	.content-panel {
+		.column(6);
+		.push(3);
+	}
+	.intro {
+		padding: @ws-unit*15 0;
+	}
+
+	.work {
+
+		.content-panel {
+			.column(6);
+			.push(2);
+
+			.about-us {
+				padding: @ws-unit*8 0;
+			}
+
+			.moo {
+				padding: @ws-unit*8 0;
+				
+			}
+		}
+	}
+
+	.contact {
+
+		padding-top: @ws-unit*8;
+
+		.text, h2, .buttons{
+			.column(6);
+			.push(3);
+		}
+
+		.buttons {
+			padding-top: @ws-unit*5;
+			text-align: center;
+		}
+	}
+
+
+}
+
+// Responsive: Landscape phone to desktop/tablet
+@media (max-width: 767px) {
+
+	.content-panel {
+		.column(8);
+		.push(2);
+	}
+	.intro {
+		padding: @ws-unit*15 0;
+	}
+
+	.work {
+
+		.content-panel {
+			.column(8);
+			.push(2);
+
+		}
+	}
+	
+	.work .about-us {
+				padding: @ws-unit*5 0;
+			}
+
+	.work .moo {
+				padding: @ws-unit*5 0;
+				
+			}
+
+
+	.contact {
+
+		padding: @ws-unit*10 0;
+
+		.text, h2, .buttons{
+			.column(8);
+			.push(2);
+		}
+
+		.buttons {
+			padding-top: @ws-unit*2;
+			text-align: center;
+		}
+	}
+
+}
+
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media (max-width: 480px) {
+
+	.nav {
+		padding:5px 0;
+
+		.tagline {
+			display: none;
+		}
+
+		.nav-logo .logo {
+			top:5px;
+		}
+	}
+
+	.content-panel {
+		.column(10);
+		.push(1);
+	}
+
+	.about {
+		padding: @ws-unit*5 0;
+	}
+	.intro {
+		padding: @ws-unit*7 0;
+	}
+
+	.work {
+		.carousel-control {
+			display: none;
+		}
+
+		.content-panel {
+			.column(10);
+			.push(1);
+
+			&.about-us {
+				padding: @ws-unit*5 0;
+			}
+
+			&.moo {
+				padding: @ws-unit*5 0;
+				
+			}
+		}
+	}
+
+	.contact {
+
+		padding: @ws-unit*5 0;
+
+		.text, h2, .buttons{
+			.column(10);
+			.push(1);
+		}
+
+		.buttons {
+			padding-top: @ws-unit*2;
+			text-align: center;
+		}
+	}
+}
 }

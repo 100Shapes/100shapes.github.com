@@ -2,6 +2,7 @@ from django_assets import Bundle, register
 
 js_base = Bundle(
 	'js/vendor/jquery-1.8.2.min.js',
+	'js/vendor/bootstrap.js',
 	output='gen/base.%(version)s.js')
 
 styles_base = Bundle(

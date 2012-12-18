@@ -1,8 +1,14 @@
 @import "vars";
 
 .moo {
+
+	h2 {
+		font-size: 24px;
+		line-height: 24px;
+	}
+
 	header {
-		background-image: url("../img/moo.jpg");
+		background-image: url("../img/moo-header.jpg");
 	}
 
 	header, .promo-box {
@@ -28,14 +34,14 @@
 		}
 
 		.content-panel {
-			.column(4);
-			margin-top: @ws-unit*10;
-			margin-bottom: @ws-unit*9;
+			.column(8);
+			margin-top: @ws-unit*5;
+			margin-bottom: @ws-unit*5;
 		}
 	}
 
 	.content {
-		margin-top: @ws-unit*4;
+		margin-top: @ws-unit*5;
 	}
 
 	.promo-box {
@@ -50,13 +56,19 @@
 		}	
 	}
 
-	section {
+	.content .content-panel {
 		.column(8);
-		margin-bottom: @ws-unit*9;
+		margin-bottom: @ws-unit*5;
 	}
 
-	.content section:nth-child(2n) {
+	.content .img-panel {
+		.column(4);
+	}
+
+	.content .img-panel:nth-child(2n+1) {
+		clear: left;
+		margin-top:-@ws-unit*2;
 		//text-align: right;
-		.push(4);
+		//.push(4);
 	}
 }

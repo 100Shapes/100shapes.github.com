@@ -2,10 +2,6 @@
 
 .moo {
 
-	h2 {
-		font-size: 24px;
-		line-height: 24px;
-	}
 
 	header {
 		background-image: url("../img/moo-header.jpg");
@@ -16,13 +12,6 @@
 		.cover;
 		background-color: black;
 		position: relative;
-		
-		img {
-			min-height: 100%;
-			min-width: 100%;
-			position: absolute;
-			top: 0;
-		}
 
 		p { 
 			color: white;
@@ -42,21 +31,14 @@
 
 	.content {
 		margin-top: @ws-unit*5;
-	}
 
-	.promo-box {
-		h2{
-			color: #fff;
+		h2 {
+			font-size: 24px;
+			line-height: 24px;
 		}
-
-		background-image: url("../img/moo-footer.jpg");
-
-		.content-panel {
-			.push(8);
-		}	
 	}
 
-	.content .content-panel {
+		.content .content-panel {
 		.column(8);
 		margin-bottom: @ws-unit*5;
 	}
@@ -70,5 +52,166 @@
 		margin-top:-@ws-unit*2;
 		//text-align: right;
 		//.push(4);
+	}
+
+	.promo-box {
+		h2{
+			color: #fff;
+		}
+
+		background-image: url("../img/moo-footer.jpg");
+
+		.content-panel {
+			.column(4);
+			.push(8);
+			margin-top: @ws-unit*5;
+			margin-bottom: @ws-unit*5;
+		}	
+	}
+
+	@media (min-width: 768px) and (max-width: 979px) {
+
+		header, .promo-box {
+				.content-panel {
+				.column(8);
+				margin-top: @ws-unit*4;
+				margin-bottom: @ws-unit*4;
+			}
+		}
+
+		.content {
+			margin-top: @ws-unit*4;
+		}
+
+		.promo-box {
+			
+			.content-panel {
+				.push(8);
+			}	
+		}
+
+		.content .content-panel {
+			.column(8);
+			margin-bottom: @ws-unit*4;
+		}
+
+		.content .img-panel {
+			.column(4);
+		}
+
+		.content .img-panel:nth-child(2n+1) {
+			clear: left;
+			margin-top:-@ws-unit*2;
+		}
+
+		.promo-box {
+			.content-panel {
+				.column(6);
+				.push(6);	
+				margin-top: @ws-unit*4;
+				margin-bottom: @ws-unit*4;
+			}
+		}
+	}
+
+	// Responsive: Landscape phone to desktop/tablet
+	@media (max-width: 767px) {
+
+		header, .promo-box {
+			background-position: -@ws-unit*8;
+
+				.content-panel {
+				.column(10);
+				margin-top: @ws-unit*4;
+				margin-bottom: @ws-unit*4;
+			}
+		}
+
+		.content {
+			margin-top: @ws-unit*4;
+		}
+
+		.promo-box {
+			
+			.content-panel {
+				.push(8);
+			}	
+		}
+
+		.content .content-panel {
+			.column(8);
+			margin-bottom: @ws-unit*4;
+		}
+
+		.content .img-panel {
+			.column(4);
+			margin-top: 50px;
+		}
+
+		.content .img-panel:nth-child(2n+1) {
+			clear: left;
+			margin-top:30px;
+		}
+
+		.promo-box {
+			.content-panel {
+				.column(7);
+				.push(5);	
+				margin-top: @ws-unit*4;
+				margin-bottom: @ws-unit*4;
+			}
+		}
+
+	}
+
+
+	// UP TO LANDSCAPE PHONE
+	// ---------------------
+
+	@media (max-width: 480px) {
+
+		header, .promo-box {
+			background-position: -@ws-unit*20;
+				.content-panel {
+				.column(10);
+				.push(1);
+				margin-top: @ws-unit*4;
+				margin-bottom: @ws-unit*4;
+				}
+		}
+
+		.content {
+			margin-top: @ws-unit*4;
+		}
+
+		.content .content-panel {
+			.column(10);
+			.push(1);
+			margin-bottom: @ws-unit*2;
+		}
+
+		.content .img-panel {
+			.column(12);
+			text-align: center;
+			margin-bottom: @ws-unit*2;
+		}
+
+		.content .img-panel:nth-child(2n+1) {
+			clear: left;
+			display: none;
+
+		}
+
+		.promo-box {
+			.content-panel {
+				.column(10);
+				.push(1);
+				margin-top: @ws-unit*4;
+				margin-bottom: @ws-unit*4;
+			}
+		}
+
+	}
+
 	}
 }

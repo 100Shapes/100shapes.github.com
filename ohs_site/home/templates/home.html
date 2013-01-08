@@ -6,18 +6,8 @@
 {% block content %}
 
 {% include "includes/global_nav.html" %}
-
-<section class="intro">
-	<div class="container">
-		<div class="content-panel">
-			<img id="intro" src="{{ STATIC_URL }}img/100shapes.png"></img>
-			<p>We turn good ideas into great products.</p>
-			<a class="primary-btn white jump-btn" href="#about">Tell me more</a>
-		</div>
-	</div>
-</section>
-
-<section class="about">
+<!-- 
+ <section class="about">
 	<div class="container">
 		<div class="content-panel">
 			<h2 id="about">It starts with a good idea...</h2>
@@ -25,57 +15,52 @@
 			<a class="primary-btn jump-btn" href="#work">See our work</a>
 		</div>
 	</div>
-</section>
+</section>  -->
 
 <section class="work" id="work">
-<div id="ohsCarousel" class="carousel slide">
+<div id="ohsCarousel" class="carousel slide" data-interval="false">
   <!-- Carousel items -->
   <div class="carousel-inner">
-    <div class="active item">
-    	<div class="moo">
-			<div class="container">
-				<div class="content-panel">
-					<h2>Testing Moo.com</h2>
-					<p>We carried out in-depth usability testing for MOO’s brand new Quick &amp; Easy tool. Working closely with the MOO design team, we crafted, organised one-on-one, in-depth interviews with potential customers and helped the MOO team figure out what was working and what needed a little tweaking.</p>
-					<a class="primary-btn" href="{% url moo %}">Read more</a>
-				</div>
+  	<div class="active item intro" href="#ohsCarousel" data-slide="next">
+  		<div class="container">
+			<div class="content-panel">
+				<img id="intro" src="{{ STATIC_URL }}img/100shapes.png"></img>
+				<a class="primary-btn white" href="/about">Find out more</a>
 			</div>
 		</div>
 	</div>
-    <div class="item">
-    	<div class="about-us">
-			<div class="container">
-				<div class="content-panel">
-					<div class="with-note orange">
-						<span>WORTH A READ</span>
-						<h2>About us</h2>
-					</div>
-					<p>We are a young digital design agency with a passion for creating products of the highest possible quality. We design. We build. We deliver. But that’s not all...</p>
-					<a class="primary-btn" href="{% url about %}">Find out what</a>
+    <div class="item moo" href="#ohsCarousel" data-slide="next">
+		<div class="container">
+			<div class="content-panel">
+				<h2>Testing Moo.com</h2>
+				<p>We carried out in-depth usability testing for MOO’s brand new Quick &amp; Easy tool. Working closely with the MOO design team, we crafted, organised one-on-one, in-depth interviews with potential customers and helped the MOO team figure out what was working and what needed a little tweaking.</p>
+				<a class="primary-btn" href="{% url moo %}">Read more</a>
+			</div>
+		</div>
+	</div>
+    <div class="item about-us" href="#ohsCarousel" data-slide="next">
+		<div class="container">
+			<div class="content-panel">
+				<div class="with-note orange">
+					<span>WORTH A READ</span>
+					<h2>About us</h2>
 				</div>
+				<p>We are a young digital design agency with a passion for creating products of the highest possible quality. We design. We build. We deliver. But that’s not all...</p>
+				<a class="primary-btn" href="{% url about %}">Find out what</a>
 			</div>
 		</div>
 	</div>
   </div>
   <!-- Carousel nav -->
-  <a class="carousel-control left" href="#ohsCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#ohsCarousel" data-slide="next">&rsaquo;</a>
+  			<div class="carousel-nav">
+    <a href="#" data-to="0" class="active">1</a>
+    <a href="#" data-to="1">2</a>
+    <a href="#" data-to="2">3</a>
+</div>
 </div>	
 </section>
 
-<section class="contact">
-	<div class="container">
-		<h2 id="contact">How about a chat?</h2>
-		<div class="text">
-			<p>Get a sense of what 100Shapes are about and what we could do for you. Why not come in and see us? To arrange a time, email:</p>
-			<a href="mailto:hi@100shapes.com" title="hi@100shapes.com" class="email">hi@100shapes.com</a>
-		</div>
-		<div class="buttons">
-			<a href="http://www.facebook.com/100shapes" class="primary-btn facebook" onClick="_gaq.push(['_trackEvent', 'Social', 'profile-viewed', 'Facebook']);"><span>/100shapes</span></a>
-			<a href="https://twitter.com/100shapes" class="primary-btn twitter" onClick="_gaq.push(['_trackEvent', 'Social', 'profile-viewed', 'Twitter']);"><span>@100shapes</span></a>
-		</div>
-	</div>
-</section>
+
 {% endblock content %}
 
 {% block scripts %}

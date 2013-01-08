@@ -5,14 +5,15 @@
 
 .home {
 
+	height: 100%;
+
 	h1 {
 		margin-top: @ws-unit*14;
 		display: none;
 	}
 
 	h2 {
-		color: @header-color-pink;
-		text-align: left;
+		color: #fff;
 		font-size: 48px;
 		font-weight: normal;
 		margin: 18px 0;
@@ -30,42 +31,39 @@
 	}
 
 	p {
-		color: #999;
+		color: #fff;
 		line-height: 24px;
 		font-size: 14px;
 		font-weight: 100;
 
 	}
 
-	section {
-		padding-bottom: @ws-unit*12;
-	}
-
 	.banner {
-		.transition(0.2s);
+		//.transition(0.2s);
 		z-index: 1;
 		position: fixed;
 		width: 100%;
+		height: 100px;
 
 		.nav-logo .logo {
-			.transition;
+		//	.transition;
 			.opacity(1);
 		}
 		.nav-logo .tagline {
-			.transition;
-			.opacity(0);
-			margin-left: 0;
+		//	.transition;
+			.opacity(1);
 			color: #fff;
 		}
 
 		&.transparent {
 
 			background-color: transparent;
-			border-bottom-color: transparent;
+			background-image: url('../img/nav_background.png');
+			border-bottom: none;
 
 			a {
-				.opacity(0.6);
-				color: #fff;
+				.opacity(1);
+				color: @header-color-pink;
 
 				&:hover {
 					.opacity(1);					
@@ -73,7 +71,8 @@
 			}
 
 			.nav-logo .logo {
-				.opacity(0);
+				.opacity(1);
+				background-position: 0px -1px;
 			}
 			.nav-logo .tagline {
 				.opacity(0.6);
@@ -81,167 +80,138 @@
 		}
 	}
 
-	
-	
 	footer {
-		margin: 0 0 @ws-unit*6;
-	
+		margin: 0 0 @ws-unit*6;	
 	}
 
-	.jump-btn:after {
-		content: "\2193";
-		padding-left: 0.2em;
-		font-size: 16px;
+	.carousel {
+		position:absolute;
+	    top:0;
+   		left:0;
+   		width:100%;
+    	height:100%;
+		z-index: 0;
+
+			
+		.item {
+			display: none;
+			position: relative;
+			height: 100%;
+			-webkit-transition: 1s ease-in-out left;
+			-moz-transition: 1s ease-in-out left;
+			-o-transition: 1s ease-in-out left;
+			transition: 1s ease-in-out left;
+		}
+		.item > img {
+			display: block;
+		 	line-height: 1;
+		}
+		
+		.active, .next, .prev {
+			display: block;
+			-webkit-transform: translate3d(0,0,0);
+		}
+		
+		.active {
+			left: 0;
+		}
+		
+		.next, .prev {
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		.next {
+			left: 100%;
+		}
+		
+		.prev {
+			left: -100%;
+		}
+		
+		.next.left, .prev.right {
+			left: 0;
+		}
+		
+		.active.left {
+			left: -100%;
+		}
+		
+		.active.right {
+			left: 100%;
+		}
+	}
+
+	.carousel-inner {
+	 	overflow: hidden;
+		width: 100%;
+		height: 100%;
+		position: relative;
+	
+	}
+	.carousel-nav {
+		margin: -@ws-unit*2 auto 0 auto;
+		width: 17*3px;
+
+		 a {
+			.rounded(2px);
+			.opacity(.5);
+			width: 12px;
+			height: 12px;
+			background-color: @header-color-light;
+			text-indent: -9999px;
+			float: left;
+			margin-left: @ws-unit/4;
+
+			&.active {
+				background-color: @header-color-pink;
+			}
+		}
 	}
 
 	.content-panel {
 		.column(4);
-		.push(4);
-	}	
+		margin-top:300px;
+		position: relative;
 
-	.email {
-		display: block;
-		color: #fff;
-		margin-top:40px;
-		text-align: center;
 	}
+
 
 	.intro {
-		.cover;
-		padding: @ws-unit*15 0 @ws-unit*20 0;
+		.cover();
 		background-image: url('../img/top.jpg');
 		text-align: center;
-		
-		p {
-			color: #fff;
-			font-size: 16px;
-			margin: 15px 0 20px 0;
-		}
-	}
 
-	.about {
-		background-color: #eee;
-		padding: @ws-unit*12 0;
-		
-		h4 {
-			float: left;
-			margin: 0;
+		img {
+			margin-bottom: @ws-unit;	
 		}
-	}
-
-	.work {
-		padding: 0;
-		.carousel {
-			z-index: 0;
-			position: relative;
-
-			.item {
-				display: none;
-				position: relative;
-				-webkit-transition: 0.6s ease-in-out left;
-				-moz-transition: 0.6s ease-in-out left;
-				-o-transition: 0.6s ease-in-out left;
-				transition: 0.6s ease-in-out left;
-			}
-			.item > img {
-			  display: block;
-			  line-height: 1;
-			}
-			
-			.active, .next, .prev {
-			  display: block;
-			}
-			
-			.active {
-			  left: 0;
-			}
-			
-			.next, .prev {
-			  position: absolute;
-			  top: 0;
-			  width: 100%;
-			}
-
-			.next {
-			  left: 100%;
-			}
-			
-			.prev {
-			  left: -100%;
-			}
-			
-			.next.left, .prev.right {
-			  left: 0;
-			}
-			
-			.active.left {
-			  left: -100%;
-			}
-			
-			.active.right {
-			  left: 100%;
-			}
-		}
-		.carousel-inner {
-		 	overflow: hidden;
-			width: 100%;
-			position: relative;
-		
-		}
-		.carousel-control {
-			.opacity(0.5);
-			position: absolute;
+		.content-panel{
+			width: 220px;
 			top: 50%;
-			left: 15px;
-			width: 40px;
-			height: 40px;
-			margin-top: -20px;
-			font-size: 200px;
-			font-weight: 100;
-			line-height: 30px;
-			color: #ffffff;
-			text-align: center;
-		  
-			&.right {
-				left: auto;
-				right: 15px;
-			}
-			
-			&:hover {
-				.opacity(0.9);
-				color: #ffffff;
-				text-decoration: none;
-			}
+			left: 50%;
+			margin: -35px 0 0 -110px;
+			position: absolute
 		}
+	}
 
-		h2 {
-			color: #fff;
-			margin-top: 0;
+	.moo {
+		.cover();
+		background-image: url('../img/moo.jpg');
+
+		.content-panel{
+			text-align: right;
 		}
+	}
 
-		p {
-			color: #fff;
+	.about-us {
+		.cover();
+		background-image: url("../img/header-about.jpg");
+	
+		.content-panel{
+
+
 		}
-
-		.content-panel {
-			.column(3);
-			.push(1);
-		}
-
-		.about-us {
-			.cover();
-			background-image: url("../img/header-about.jpg");
-			padding: @ws-unit*10 0;
-			
-		}
-
-		.moo {
-			.cover();
-			background-image: url('../img/moo.jpg');
-			padding: @ws-unit*10 0;
-			
-		}
-
 	}
 
 	.contact {
@@ -330,162 +300,5 @@
 			}
 		}
 	}
-	@media (min-width: 768px) and (max-width: 979px) {
 
-
-		.content-panel {
-			.column(6);
-			.push(3);
-		}
-		.intro {
-			padding: @ws-unit*15 0;
-		}
-
-		.work {
-
-			.content-panel {
-				.column(6);
-				.push(2);
-
-				.about-us {
-					padding: @ws-unit*8 0;
-				}
-
-				.moo {
-					padding: @ws-unit*8 0;
-					
-				}
-			}
-		}
-
-		.contact {
-
-			padding-top: @ws-unit*8;
-
-			.text, h2, .buttons{
-				.column(6);
-				.push(3);
-			}
-
-			.buttons {
-				padding-top: @ws-unit*5;
-				text-align: center;
-			}
-		}
-
-
-	}
-
-	// Responsive: Landscape phone to desktop/tablet
-	@media (max-width: 767px) {
-
-		.content-panel {
-			.column(8);
-			.push(2);
-		}
-		.intro {
-			padding: @ws-unit*15 0;
-		}
-
-		.work {
-
-			.content-panel {
-				.column(8);
-				.push(2);
-
-			}
-		}
-		
-		.work .about-us {
-					padding: @ws-unit*5 0;
-				}
-
-		.work .moo {
-					padding: @ws-unit*5 0;
-					
-				}
-
-
-		.contact {
-
-			padding: @ws-unit*10 0;
-
-			.text, h2, .buttons{
-				.column(8);
-				.push(2);
-			}
-
-			.buttons {
-				padding-top: @ws-unit*2;
-				text-align: center;
-			}
-		}
-
-	}
-
-
-	// UP TO LANDSCAPE PHONE
-	// ---------------------
-
-	@media (max-width: 480px) {
-
-		.nav {
-			padding:5px 0;
-
-			.tagline {
-				display: none;
-			}
-
-			.nav-logo .logo {
-				top:5px;
-			}
-		}
-
-		.content-panel {
-			.column(10);
-			.push(1);
-		}
-
-		.about {
-			padding: @ws-unit*5 0;
-		}
-		.intro {
-			padding: @ws-unit*7 0;
-		}
-
-		.work {
-			.carousel-control {
-				//display: none;
-			}
-
-			.content-panel {
-				.column(8);
-				.push(2);
-
-				&.about-us {
-					padding: @ws-unit*5 0;
-				}
-
-				&.moo {
-					padding: @ws-unit*5 0;
-					
-				}
-			}
-		}
-
-		.contact {
-
-			padding: @ws-unit*5 0;
-
-			.text, h2, .buttons{
-				.column(10);
-				.push(1);
-			}
-
-			.buttons {
-				padding-top: @ws-unit*2;
-				text-align: center;
-			}
-		}
-	}
 }

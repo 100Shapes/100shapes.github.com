@@ -20,6 +20,4 @@ $(".carousel").bind('slide', function(e) {
 
 $(".item").click(function(e){
     $('.carousel').carousel('next');
-    console.log("hello");
-
 });

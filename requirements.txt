@@ -12,3 +12,4 @@ git+git://github.com/100Shapes/ghp-import.git#egg=ghp-import
 git+git://github.com/100Shapes/django-bakery.git#egg=django-bakery
 django-assets==0.8
 webassets==0.8
+Flask==0.8

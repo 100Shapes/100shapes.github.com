@@ -9,6 +9,7 @@ $(".carousel-nav a").click(function(e){
 });
 
 $(".carousel").bind('slide', function(e) {
+    //e.preventDefault();
     var elements = 3;
     var nav = $('.carousel-nav');
     var index = $('.carousel').find('.item.active').index();

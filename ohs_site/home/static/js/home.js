@@ -9,7 +9,6 @@ $(".carousel-nav a").click(function(e){
 });
 
 $(".carousel").bind('slide', function(e) {
-    //e.preventDefault();
     var elements = 3;
     var nav = $('.carousel-nav');
     var index = $('.carousel').find('.item.active').index();
@@ -17,4 +16,10 @@ $(".carousel").bind('slide', function(e) {
     var item = nav.find('a').get(index);
     nav.find('a.active').removeClass('active');
     $(item).addClass('active');
+});
+
+$(".item").click(function(e){
+    $('.carousel').carousel('next');
+    console.log("hello");
+
 });

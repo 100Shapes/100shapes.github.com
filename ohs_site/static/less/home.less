@@ -97,6 +97,7 @@
 			display: none;
 			position: relative;
 			height: 100%;
+			-webkit-transform: translate3d(0,0,0);
 			-webkit-transition: 1s cubic-bezier(0,0,0,.99) left;
 			-moz-transition: 1s cubic-bezier(0,0,0,.99) left;
 			-o-transition: 1s cubic-bezier(0,0,0,.99) left;
@@ -124,27 +125,25 @@
 
 		.next {
 			left: 100%;
-			-webkit-transform: translate3d(0,0,0);
 		}
 		
 		.prev {
 			left: -100%;
-			-webkit-transform: translate3d(0,0,0);
 		}
 		
 		.next.left, .prev.right {
 			left: 0;
-			-webkit-transform: translate3d(0,0,0);
+			background-image: none;
 		}
 		
 		.active.left {
 			left: -100%;
-			-webkit-transform: translate3d(0,0,0);
+			background-image: none;
 		}
 		
 		.active.right {
 			left: 100%;
-			-webkit-transform: translate3d(0,0,0);
+			background-image: none;
 		}
 	}
 
@@ -184,38 +183,58 @@
 
 
 	.intro {
-		.cover();
-		background-image: url('../img/top.jpg');
 		text-align: center;
+		background-color: #000;
 
-		img {
+		.back {
+			.opacity(.0);
+			.cover();
+			height: 100%;
+			background-image: url("../img/top.jpg");
+		}
+
+		#logo {
 			margin-bottom: @ws-unit;	
 		}
-		.content-panel{
+		.content-panel {
 			width: 220px;
 			top: 50%;
 			left: 50%;
 			margin: -35px 0 0 -110px;
 			position: absolute
 		}
+
+		&.loaded {
+			.back {
+				.transition(2s);
+				.opacity(1);
+			}
+		}
 	}
 
 	.moo {
 		.cover();
-		background-image: url('../img/moo.jpg');
+		background-image: none;
 
-		.content-panel{
+		.content-panel {
 			text-align: right;
+		}
+
+		&.loaded {
+			background-image: url("../img/moo.jpg");
 		}
 	}
 
 	.about-us {
 		.cover();
-		background-image: url("../img/header-about.jpg");
-	
-		.content-panel{
+		background-image: none;
 
+		.content-panel {
 
+		}
+
+		&.loaded {
+			background-image: url("../img/header-about.jpg");
 		}
 	}
 
@@ -223,7 +242,7 @@
 
 		padding-top: @ws-unit*10;
 		
-		.text{
+		.text {
 			.column(4);
 			.push(2);
 			float: left;
@@ -249,7 +268,7 @@
 			text-align: left;
 			margin: 0px;
 			
-			&:hover{
+			&:hover {
 				.opacity(1);
 				text-decoration: none;
 			}

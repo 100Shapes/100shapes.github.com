@@ -26,7 +26,7 @@
 
 	header, .promo-box {
 		
-		.cover;
+		.cover();
 		background-color: black;
 		position: relative;
 		
@@ -86,26 +86,119 @@
 		}	
 	}
 	@media (min-width: 768px) and (max-width: 979px) {
+		header{
+			.content-panel {
+				.column(4);
+				.push(1);
+				margin-top: @ws-unit*8;
+				margin-bottom: @ws-unit*8;
+					
+			}
+		}
 
+		section {
+			.column(10);
+			.push(1);
+			margin-bottom: @ws-unit*1.5;
+		}
+
+		.content {
+			.columns {
+				.column(10);
+				.push(1);
+				margin-bottom: @ws-unit*5;
+				
+				.do_rows {
+					.row(10);
+					
+					section {
+						.column(5,10);
+						padding-top: @ws-unit*1.5;
+					}
+				}
+			}
+		}
+
+		.promo-box {
+			.content-panel {		
+				.column(6);
+				.push(5);
+			}
+		}
 	}
+
 
 	// Responsive: Landscape phone to desktop/tablet
 	@media (max-width: 767px) {
+		header{
+			.content-panel {
+				.column(10);
+				.push(1);
+				margin-top: @ws-unit*8;
+				margin-bottom: @ws-unit*8;
+					
+			}
+		}
 
+		section {
+			.column(10);
+			.push(1);
+			margin-bottom: @ws-unit*1.5;
+		}
+		.content {
+			.columns {
+				margin-bottom: @ws-unit*5;
+				section {
+					padding-top: @ws-unit*1.5;
+					.column(10);
+					.push(1);
+				}
+			}
+		}
+
+		.promo-box {
+			background-position: -70px;
+			.content-panel {		
+				.column(10);
+				.push(1);
+			}
+		}
 	}
 
 	// UP TO LANDSCAPE PHONE
 	// ---------------------
 	@media (max-width: 480px) {
-	header.content-panel {
-			.column(6);
-			.push(3);
-			margin-top: @ws-unit*15 0;
+		header{
+			.content-panel {
+				.column(10);
+				.push(1);
+				margin-top: @ws-unit*8;
+				margin-bottom: @ws-unit*8;
+			}
 		}
 
 		section {
-		.column(8);
-		margin-bottom: @ws-unit*7;
-	}
+			.column(10);
+			.push(1);
+			margin-bottom: @ws-unit*1.5;
+		}
+		.content {
+			.columns {
+				margin-bottom: @ws-unit*5;
+				section {
+					padding-top: @ws-unit*1.5;
+					.column(10);
+					.push(1);
+				}
+			}
+		}
+
+		.promo-box {
+			background-position: -270px;
+			.content-panel {		
+				.column(10);
+				.push(1);
+			}
+		}
 	}
 }

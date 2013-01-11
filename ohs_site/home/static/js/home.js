@@ -18,6 +18,16 @@ $(".carousel").bind('slide', function(e) {
     $(item).addClass('active');
 });
 
+$('.carousel').carousel({
+  interval: false
+})
+
 $(".item").click(function(e){
+     var elements = 3;
     $('.carousel').carousel('next');
+});
+
+$(".carousel").bind('slid', function(e) {
+    var active = $('.carousel').find('.item.active');
+    $(active).addClass('loaded');
 });
